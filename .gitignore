@@ -71,7 +71,7 @@ node_modules/
 
 
 # Dist
-dist/
+# dist/
 
 #.env
 *.env
