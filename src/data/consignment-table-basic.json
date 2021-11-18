@@ -1,0 +1,902 @@
+[
+	{
+		"lnc": "LNC-941160",
+		"class": "Breeder",
+		"country": "Vietnam",
+		"species": "Cattle",
+		"date": "17 Nov 2016",
+		"issues": 2,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-410784",
+		"class": "Slaughter",
+		"country": "Vietnam",
+		"species": "Cattle",
+		"date": "28 Nov 2016",
+		"issues": 2,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-209274",
+		"class": "Slaughter",
+		"country": "Brunei",
+		"species": "Cattle",
+		"date": "16 Dec 2016",
+		"issues": 4,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-447035",
+		"class": "Slaughter",
+		"country": "China",
+		"species": "Cattle",
+		"date": "13 Dec 2016",
+		"issues": 2,
+		"impact": "-"
+	},
+	{
+		"lnc": "LNC-156633",
+		"class": "Slaughter",
+		"country": "Thailand",
+		"species": "Cattle",
+		"date": "30 Nov 2016",
+		"issues": 2,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-876242",
+		"class": "Slaughter",
+		"country": "Japan",
+		"species": "Cattle",
+		"date": "27 Nov 2016",
+		"issues": 0,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-842330",
+		"class": "Breeder",
+		"country": "Japan",
+		"species": "Cattle",
+		"date": "05 Dec 2016",
+		"issues": 1,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-379497",
+		"class": "Slaughter",
+		"country": "Germany",
+		"species": "Cattle",
+		"date": "23 Nov 2016",
+		"issues": 1,
+		"impact": "-"
+	},
+	{
+		"lnc": "LNC-950066",
+		"class": "Breeder",
+		"country": "China",
+		"species": "Cattle",
+		"date": "23 Nov 2016",
+		"issues": 0,
+		"impact": "2"
+	},
+	{
+		"lnc": "LNC-477574",
+		"class": "Breeder",
+		"country": "Brunei",
+		"species": "Cattle",
+		"date": "16 Dec 2016",
+		"issues": 2,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-308458",
+		"class": "Slaughter",
+		"country": "Germany",
+		"species": "Cattle",
+		"date": "17 Dec 2016",
+		"issues": 4,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-139459",
+		"class": "Slaughter",
+		"country": "Brunei",
+		"species": "Cattle",
+		"date": "08 Dec 2016",
+		"issues": 3,
+		"impact": "2"
+	},
+	{
+		"lnc": "LNC-410543",
+		"class": "Slaughter",
+		"country": "Japan",
+		"species": "Cattle",
+		"date": "06 Dec 2016",
+		"issues": 3,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-503450",
+		"class": "Breeder",
+		"country": "China",
+		"species": "Cattle",
+		"date": "17 Nov 2016",
+		"issues": 2,
+		"impact": "2"
+	},
+	{
+		"lnc": "LNC-994282",
+		"class": "Slaughter",
+		"country": "Germany",
+		"species": "Cattle",
+		"date": "14 Dec 2016",
+		"issues": 4,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-898798",
+		"class": "Slaughter",
+		"country": "Brunei",
+		"species": "Cattle",
+		"date": "27 Nov 2016",
+		"issues": 3,
+		"impact": "-"
+	},
+	{
+		"lnc": "LNC-586300",
+		"class": "Breeder",
+		"country": "Germany",
+		"species": "Cattle",
+		"date": "05 Dec 2016",
+		"issues": 2,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-810840",
+		"class": "Slaughter",
+		"country": "Brunei",
+		"species": "Cattle",
+		"date": "30 Nov 2016",
+		"issues": 4,
+		"impact": "2"
+	},
+	{
+		"lnc": "LNC-815716",
+		"class": "Breeder",
+		"country": "United Arab Emirates",
+		"species": "Cattle",
+		"date": "15 Dec 2016",
+		"issues": 1,
+		"impact": "2"
+	},
+	{
+		"lnc": "LNC-797104",
+		"class": "Breeder",
+		"country": "China",
+		"species": "Cattle",
+		"date": "07 Dec 2016",
+		"issues": 3,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-595267",
+		"class": "Breeder",
+		"country": "Brunei",
+		"species": "Cattle",
+		"date": "09 Dec 2016",
+		"issues": 5,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-839295",
+		"class": "Breeder",
+		"country": "United Arab Emirates",
+		"species": "Cattle",
+		"date": "04 Dec 2016",
+		"issues": 0,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-718631",
+		"class": "Breeder",
+		"country": "China",
+		"species": "Cattle",
+		"date": "15 Dec 2016",
+		"issues": 4,
+		"impact": "-"
+	},
+	{
+		"lnc": "LNC-665281",
+		"class": "Breeder",
+		"country": "Germany",
+		"species": "Cattle",
+		"date": "20 Dec 2016",
+		"issues": 5,
+		"impact": "2"
+	},
+	{
+		"lnc": "LNC-604936",
+		"class": "Slaughter",
+		"country": "China",
+		"species": "Cattle",
+		"date": "21 Dec 2016",
+		"issues": 2,
+		"impact": "-"
+	},
+	{
+		"lnc": "LNC-148005",
+		"class": "Slaughter",
+		"country": "Vietnam",
+		"species": "Cattle",
+		"date": "07 Dec 2016",
+		"issues": 3,
+		"impact": "-"
+	},
+	{
+		"lnc": "LNC-802749",
+		"class": "Breeder",
+		"country": "Thailand",
+		"species": "Cattle",
+		"date": "14 Nov 2016",
+		"issues": 3,
+		"impact": "-"
+	},
+	{
+		"lnc": "LNC-648483",
+		"class": "Breeder",
+		"country": "Thailand",
+		"species": "Cattle",
+		"date": "21 Nov 2016",
+		"issues": 3,
+		"impact": "2"
+	},
+	{
+		"lnc": "LNC-760691",
+		"class": "Breeder",
+		"country": "China",
+		"species": "Cattle",
+		"date": "19 Nov 2016",
+		"issues": 3,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-972831",
+		"class": "Breeder",
+		"country": "Germany",
+		"species": "Cattle",
+		"date": "27 Nov 2016",
+		"issues": 1,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-898541",
+		"class": "Slaughter",
+		"country": "Germany",
+		"species": "Cattle",
+		"date": "05 Dec 2016",
+		"issues": 5,
+		"impact": "-"
+	},
+	{
+		"lnc": "LNC-415391",
+		"class": "Breeder",
+		"country": "Germany",
+		"species": "Cattle",
+		"date": "30 Nov 2016",
+		"issues": 2,
+		"impact": "2"
+	},
+	{
+		"lnc": "LNC-340121",
+		"class": "Breeder",
+		"country": "Germany",
+		"species": "Cattle",
+		"date": "08 Dec 2016",
+		"issues": 0,
+		"impact": "-"
+	},
+	{
+		"lnc": "LNC-557511",
+		"class": "Slaughter",
+		"country": "Thailand",
+		"species": "Cattle",
+		"date": "29 Nov 2016",
+		"issues": 4,
+		"impact": "-"
+	},
+	{
+		"lnc": "LNC-260850",
+		"class": "Breeder",
+		"country": "United Arab Emirates",
+		"species": "Cattle",
+		"date": "09 Dec 2016",
+		"issues": 1,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-892091",
+		"class": "Breeder",
+		"country": "Vietnam",
+		"species": "Cattle",
+		"date": "17 Nov 2016",
+		"issues": 3,
+		"impact": "-"
+	},
+	{
+		"lnc": "LNC-147711",
+		"class": "Breeder",
+		"country": "Japan",
+		"species": "Cattle",
+		"date": "20 Nov 2016",
+		"issues": 2,
+		"impact": "-"
+	},
+	{
+		"lnc": "LNC-704550",
+		"class": "Breeder",
+		"country": "Thailand",
+		"species": "Cattle",
+		"date": "22 Nov 2016",
+		"issues": 3,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-158717",
+		"class": "Slaughter",
+		"country": "Thailand",
+		"species": "Cattle",
+		"date": "08 Dec 2016",
+		"issues": 4,
+		"impact": "2"
+	},
+	{
+		"lnc": "LNC-140272",
+		"class": "Slaughter",
+		"country": "Vietnam",
+		"species": "Cattle",
+		"date": "15 Nov 2016",
+		"issues": 5,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-150009",
+		"class": "Slaughter",
+		"country": "Brunei",
+		"species": "Cattle",
+		"date": "12 Nov 2016",
+		"issues": 1,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-370254",
+		"class": "Breeder",
+		"country": "China",
+		"species": "Cattle",
+		"date": "28 Nov 2016",
+		"issues": 1,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-174611",
+		"class": "Slaughter",
+		"country": "United Arab Emirates",
+		"species": "Cattle",
+		"date": "01 Dec 2016",
+		"issues": 1,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-108077",
+		"class": "Slaughter",
+		"country": "Japan",
+		"species": "Cattle",
+		"date": "16 Nov 2016",
+		"issues": 4,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-486713",
+		"class": "Slaughter",
+		"country": "China",
+		"species": "Cattle",
+		"date": "05 Dec 2016",
+		"issues": 1,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-297675",
+		"class": "Slaughter",
+		"country": "Germany",
+		"species": "Cattle",
+		"date": "17 Dec 2016",
+		"issues": 2,
+		"impact": "2"
+	},
+	{
+		"lnc": "LNC-451198",
+		"class": "Breeder",
+		"country": "Japan",
+		"species": "Cattle",
+		"date": "16 Nov 2016",
+		"issues": 5,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-552622",
+		"class": "Breeder",
+		"country": "Japan",
+		"species": "Cattle",
+		"date": "08 Dec 2016",
+		"issues": 4,
+		"impact": "-"
+	},
+	{
+		"lnc": "LNC-132606",
+		"class": "Slaughter",
+		"country": "Brunei",
+		"species": "Cattle",
+		"date": "15 Dec 2016",
+		"issues": 0,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-816660",
+		"class": "Slaughter",
+		"country": "United Arab Emirates",
+		"species": "Cattle",
+		"date": "26 Nov 2016",
+		"issues": 5,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-885495",
+		"class": "Slaughter",
+		"country": "Thailand",
+		"species": "Cattle",
+		"date": "01 Dec 2016",
+		"issues": 5,
+		"impact": "2"
+	},
+	{
+		"lnc": "LNC-262028",
+		"class": "Breeder",
+		"country": "Vietnam",
+		"species": "Cattle",
+		"date": "13 Dec 2016",
+		"issues": 3,
+		"impact": "-"
+	},
+	{
+		"lnc": "LNC-525586",
+		"class": "Breeder",
+		"country": "Vietnam",
+		"species": "Cattle",
+		"date": "27 Nov 2016",
+		"issues": 2,
+		"impact": "2"
+	},
+	{
+		"lnc": "LNC-994869",
+		"class": "Breeder",
+		"country": "Brunei",
+		"species": "Cattle",
+		"date": "13 Dec 2016",
+		"issues": 1,
+		"impact": "-"
+	},
+	{
+		"lnc": "LNC-148562",
+		"class": "Slaughter",
+		"country": "Germany",
+		"species": "Cattle",
+		"date": "30 Nov 2016",
+		"issues": 4,
+		"impact": "-"
+	},
+	{
+		"lnc": "LNC-163226",
+		"class": "Breeder",
+		"country": "Brunei",
+		"species": "Cattle",
+		"date": "04 Dec 2016",
+		"issues": 1,
+		"impact": "2"
+	},
+	{
+		"lnc": "LNC-129548",
+		"class": "Breeder",
+		"country": "China",
+		"species": "Cattle",
+		"date": "20 Nov 2016",
+		"issues": 0,
+		"impact": "2"
+	},
+	{
+		"lnc": "LNC-752438",
+		"class": "Slaughter",
+		"country": "Brunei",
+		"species": "Cattle",
+		"date": "15 Nov 2016",
+		"issues": 1,
+		"impact": "-"
+	},
+	{
+		"lnc": "LNC-603144",
+		"class": "Slaughter",
+		"country": "Vietnam",
+		"species": "Cattle",
+		"date": "06 Dec 2016",
+		"issues": 3,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-978339",
+		"class": "Slaughter",
+		"country": "Vietnam",
+		"species": "Cattle",
+		"date": "14 Nov 2016",
+		"issues": 5,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-173412",
+		"class": "Slaughter",
+		"country": "Japan",
+		"species": "Cattle",
+		"date": "27 Nov 2016",
+		"issues": 2,
+		"impact": "-"
+	},
+	{
+		"lnc": "LNC-255142",
+		"class": "Slaughter",
+		"country": "Japan",
+		"species": "Cattle",
+		"date": "13 Nov 2016",
+		"issues": 3,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-717700",
+		"class": "Breeder",
+		"country": "China",
+		"species": "Cattle",
+		"date": "23 Nov 2016",
+		"issues": 2,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-616176",
+		"class": "Breeder",
+		"country": "Japan",
+		"species": "Cattle",
+		"date": "20 Nov 2016",
+		"issues": 3,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-686596",
+		"class": "Breeder",
+		"country": "Japan",
+		"species": "Cattle",
+		"date": "03 Dec 2016",
+		"issues": 3,
+		"impact": "-"
+	},
+	{
+		"lnc": "LNC-161875",
+		"class": "Slaughter",
+		"country": "United Arab Emirates",
+		"species": "Cattle",
+		"date": "19 Dec 2016",
+		"issues": 2,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-781633",
+		"class": "Breeder",
+		"country": "Thailand",
+		"species": "Cattle",
+		"date": "23 Nov 2016",
+		"issues": 4,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-616701",
+		"class": "Slaughter",
+		"country": "China",
+		"species": "Cattle",
+		"date": "18 Dec 2016",
+		"issues": 5,
+		"impact": "2"
+	},
+	{
+		"lnc": "LNC-584946",
+		"class": "Breeder",
+		"country": "Brunei",
+		"species": "Cattle",
+		"date": "19 Nov 2016",
+		"issues": 3,
+		"impact": "2"
+	},
+	{
+		"lnc": "LNC-432421",
+		"class": "Slaughter",
+		"country": "Vietnam",
+		"species": "Cattle",
+		"date": "03 Dec 2016",
+		"issues": 2,
+		"impact": "-"
+	},
+	{
+		"lnc": "LNC-755814",
+		"class": "Breeder",
+		"country": "Japan",
+		"species": "Cattle",
+		"date": "19 Dec 2016",
+		"issues": 4,
+		"impact": "-"
+	},
+	{
+		"lnc": "LNC-871968",
+		"class": "Slaughter",
+		"country": "Brunei",
+		"species": "Cattle",
+		"date": "20 Nov 2016",
+		"issues": 0,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-468657",
+		"class": "Breeder",
+		"country": "Japan",
+		"species": "Cattle",
+		"date": "02 Dec 2016",
+		"issues": 5,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-251797",
+		"class": "Breeder",
+		"country": "China",
+		"species": "Cattle",
+		"date": "02 Dec 2016",
+		"issues": 0,
+		"impact": "-"
+	},
+	{
+		"lnc": "LNC-807566",
+		"class": "Slaughter",
+		"country": "China",
+		"species": "Cattle",
+		"date": "16 Nov 2016",
+		"issues": 1,
+		"impact": "2"
+	},
+	{
+		"lnc": "LNC-969625",
+		"class": "Breeder",
+		"country": "United Arab Emirates",
+		"species": "Cattle",
+		"date": "16 Nov 2016",
+		"issues": 1,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-556713",
+		"class": "Breeder",
+		"country": "Japan",
+		"species": "Cattle",
+		"date": "21 Nov 2016",
+		"issues": 2,
+		"impact": "-"
+	},
+	{
+		"lnc": "LNC-585713",
+		"class": "Breeder",
+		"country": "China",
+		"species": "Cattle",
+		"date": "28 Nov 2016",
+		"issues": 0,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-583106",
+		"class": "Slaughter",
+		"country": "Brunei",
+		"species": "Cattle",
+		"date": "19 Nov 2016",
+		"issues": 2,
+		"impact": "-"
+	},
+	{
+		"lnc": "LNC-283584",
+		"class": "Breeder",
+		"country": "Japan",
+		"species": "Cattle",
+		"date": "20 Dec 2016",
+		"issues": 2,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-428578",
+		"class": "Breeder",
+		"country": "Thailand",
+		"species": "Cattle",
+		"date": "17 Nov 2016",
+		"issues": 4,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-665881",
+		"class": "Breeder",
+		"country": "Thailand",
+		"species": "Cattle",
+		"date": "25 Nov 2016",
+		"issues": 0,
+		"impact": "2"
+	},
+	{
+		"lnc": "LNC-541556",
+		"class": "Slaughter",
+		"country": "China",
+		"species": "Cattle",
+		"date": "27 Nov 2016",
+		"issues": 3,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-296462",
+		"class": "Slaughter",
+		"country": "Thailand",
+		"species": "Cattle",
+		"date": "22 Nov 2016",
+		"issues": 5,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-988642",
+		"class": "Breeder",
+		"country": "Germany",
+		"species": "Cattle",
+		"date": "10 Dec 2016",
+		"issues": 5,
+		"impact": "2"
+	},
+	{
+		"lnc": "LNC-537397",
+		"class": "Slaughter",
+		"country": "Germany",
+		"species": "Cattle",
+		"date": "14 Nov 2016",
+		"issues": 1,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-113254",
+		"class": "Slaughter",
+		"country": "United Arab Emirates",
+		"species": "Cattle",
+		"date": "13 Dec 2016",
+		"issues": 2,
+		"impact": "2"
+	},
+	{
+		"lnc": "LNC-240928",
+		"class": "Breeder",
+		"country": "Vietnam",
+		"species": "Cattle",
+		"date": "24 Nov 2016",
+		"issues": 2,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-955529",
+		"class": "Breeder",
+		"country": "United Arab Emirates",
+		"species": "Cattle",
+		"date": "03 Dec 2016",
+		"issues": 2,
+		"impact": "2"
+	},
+	{
+		"lnc": "LNC-262325",
+		"class": "Slaughter",
+		"country": "United Arab Emirates",
+		"species": "Cattle",
+		"date": "18 Dec 2016",
+		"issues": 5,
+		"impact": "-"
+	},
+	{
+		"lnc": "LNC-852315",
+		"class": "Breeder",
+		"country": "Thailand",
+		"species": "Cattle",
+		"date": "29 Nov 2016",
+		"issues": 1,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-827878",
+		"class": "Breeder",
+		"country": "Japan",
+		"species": "Cattle",
+		"date": "26 Nov 2016",
+		"issues": 3,
+		"impact": "-"
+	},
+	{
+		"lnc": "LNC-144405",
+		"class": "Breeder",
+		"country": "Germany",
+		"species": "Cattle",
+		"date": "16 Nov 2016",
+		"issues": 2,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-641842",
+		"class": "Breeder",
+		"country": "United Arab Emirates",
+		"species": "Cattle",
+		"date": "15 Dec 2016",
+		"issues": 0,
+		"impact": "-"
+	},
+	{
+		"lnc": "LNC-907060",
+		"class": "Slaughter",
+		"country": "United Arab Emirates",
+		"species": "Cattle",
+		"date": "06 Dec 2016",
+		"issues": 2,
+		"impact": "2"
+	},
+	{
+		"lnc": "LNC-303301",
+		"class": "Breeder",
+		"country": "Germany",
+		"species": "Cattle",
+		"date": "17 Nov 2016",
+		"issues": 2,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-958889",
+		"class": "Slaughter",
+		"country": "Germany",
+		"species": "Cattle",
+		"date": "30 Nov 2016",
+		"issues": 5,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-832127",
+		"class": "Slaughter",
+		"country": "United Arab Emirates",
+		"species": "Cattle",
+		"date": "01 Dec 2016",
+		"issues": 3,
+		"impact": "1"
+	},
+	{
+		"lnc": "LNC-265895",
+		"class": "Slaughter",
+		"country": "Japan",
+		"species": "Cattle",
+		"date": "13 Dec 2016",
+		"issues": 3,
+		"impact": "-"
+	},
+	{
+		"lnc": "LNC-422180",
+		"class": "Breeder",
+		"country": "United Arab Emirates",
+		"species": "Cattle",
+		"date": "01 Dec 2016",
+		"issues": 1,
+		"impact": "-"
+	}
+]

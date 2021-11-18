@@ -1,0 +1,50 @@
+[
+	{
+		"class": "Breeder",
+		"country": "Vietnam",
+		"species": "Cattle",
+		"date": "21 May 2021"
+	},
+	{
+		"class": "Slaughter",
+		"country": "Vietnam",
+		"species": "Cattle",
+		"date": "03 Jan 2021"
+	},
+	{
+		"class": "Slaughter",
+		"country": "UAE",
+		"species": "Cattle",
+		"date": "21 Sep 2020"
+	},
+	{
+		"class": "Slaughter",
+		"country": "Japan",
+		"species": "Cattle",
+		"date": "27 Aug 2020"
+	},
+	{
+		"class": "Breeder",
+		"country": "Japan",
+		"species": "Cattle",
+		"date": "12 Apr 2020"
+	},
+	{
+		"class": "Feeder",
+		"country": "China",
+		"species": "Cattle",
+		"date": "01 Mar 2020"
+	},
+	{
+		"class": "Slaughter",
+		"country": "Thailand",
+		"species": "Cattle",
+		"date": "01 Mar 2020"
+	},
+	{
+		"class": "Slaughter",
+		"country": "Germany",
+		"species": "Cattle",
+		"date": "26 Feb 2020"
+	}
+]

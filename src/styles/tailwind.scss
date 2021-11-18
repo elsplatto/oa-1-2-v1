@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  a {
+    @apply text-action;
+		@apply underline;
+	}
+	
+	span {
+		@apply text-text;		
+	}
+	p, h1, h2, h3, th, td {
+		@apply text-text;	
+	}
+
+	table {
+		thead {
+			tr {
+				@apply border-b-4;
+				@apply border-background-alt-shade;
+				th {
+					@apply text-left;
+					@apply text-sm;
+					@apply px-4;
+				}
+			}
+		}
+		tbody {
+			tr {
+				@apply border-b;
+				@apply border-background-alt-shade;
+				td {
+					@apply px-4;
+					@apply py-2;
+					@apply text-sm;
+				}
+			}
+		}
+	}
+	table.striped {
+		tbody {
+			tr:nth-child(even) {
+				td {
+					@apply bg-background-shade;
+				}
+			}
+		}
+	}
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700');
+
+body {
+	font-family: 'Open Sans';	
+	
+}
+.content-area {
+	min-height: calc(100vh - 780px);
+}
+
+.breadcrumbs {
+	li {
+		position: relative;
+		&:after {
+			content: '';
+			position: absolute;
+			left: 100%;
+			background-image: url('../img/icons/chevron-right-gray-sm.svg');
+			width: 5px;
+			height: 9px;
+
+		}
+		&:last-child {
+			content: '';
+		}
+	}
+}
+

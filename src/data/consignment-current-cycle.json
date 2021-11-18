@@ -1,0 +1,82 @@
+[
+	{
+		"lnc": "LNC-941160",
+		"class": "Breeder",
+		"country": "Vietnam",
+		"species": "Cattle",
+		"date": 1637141400000,
+		"issues": 2,
+		"impact": "1",
+		"indicator": null
+	},
+	{
+		"lnc": "LNC-410784",
+		"class": "Slaughter",
+		"country": "Japan",
+		"species": "Cattle",
+		"date": 1635426000000,
+		"issues": 0,
+		"impact": "-",
+		"indicator": "flag"
+	},
+	{
+		"lnc": "LNC-209274",
+		"class": "Slaughter",
+		"country": "UAE",
+		"species": "Cattle",
+		"date": 1634389200000,
+		"issues": 4,
+		"impact": 1,
+		"indicator": "high"
+	},
+	{
+		"lnc": "LNC-447035",
+		"class": "Feeder",
+		"country": "China",
+		"species": "Cattle",
+		"date": 1632747600000,
+		"issues": 2,
+		"impact": 1,
+		"indicator": null
+	},
+	{
+		"lnc": "LNC-156633",
+		"class": "Slaughter",
+		"country": "Thailand",
+		"species": "Cattle",
+		"date": 1631192400000,
+		"issues": 2,
+		"impact": 1,
+		"indicator": null
+	},
+	{
+		"lnc": "LNC-876242",
+		"class": "Slaughter",
+		"country": "Japan",
+		"species": "Cattle",
+		"date": 1629810000000,
+		"issues": 0,
+		"impact": "-",
+		"indicator": null
+	},
+	{
+		"lnc": "LNC-842330",
+		"class": "Breeder",
+		"country": "Japan",
+		"species": "Cattle",
+		"date": 1628600400000,
+		"issues": 1,
+		"impact": 1,
+		"indicator": null
+	},
+	{
+		"lnc": "LNC-379497",
+		"class": "Slaughter",
+		"country": "Germany",
+		"species": "Cattle",
+		"date": 1627995600000,
+		"issues": 1,
+		"impact": "-",
+		"indicator": null
+	}
+]

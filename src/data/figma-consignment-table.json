@@ -1,0 +1,272 @@
+[
+	{
+		"lnc": "LNC-941160",
+		"class": "Breeder",
+		"country": "Vietnam",
+		"species": "Cattle",
+		"date": "17 Nov 2021",
+		"issues": 2,
+		"impact": 1
+	},
+	{
+		"lnc": "LNC-410784",
+		"class": "Slaughter",
+		"country": "Japan",
+		"species": "Cattle",
+		"date": "28 Oct 2021",
+		"issues": 3,
+		"impact": 2
+	},
+	{
+		"lnc": "LNC-209274",
+		"class": "Slaughter",
+		"country": "UAE",
+		"species": "Cattle",
+		"date": "16 Oct 2021",
+		"issues": 0,
+		"impact": "-"
+	},
+	{
+		"lnc": "LNC-447035",
+		"class": "Slaughter",
+		"country": "China",
+		"species": "Cattle",
+		"date": "25 Sep 2021",
+		"issues": 2,
+		"impact": 1
+	},
+	{
+		"lnc": "LNC-156633",
+		"class": "Slaughter",
+		"country": "Thailand",
+		"species": "Cattle",
+		"date": "09 Sep 2021",
+		"issues": 2,
+		"impact": 1
+	},
+	{
+		"lnc": "LNC-876242",
+		"class": "Slaughter",
+		"country": "Japan",
+		"species": "Cattle",
+		"date": "27 Aug 2021",
+		"issues": 0,
+		"impact": "-"
+	},
+	{
+		"lnc": "LNC-842330",
+		"class": "Breeder",
+		"country": "Japan",
+		"species": "Cattle",
+		"date": "06 Aug 2021",
+		"issues": 1,
+		"impact": 1
+	},
+	{
+		"lnc": "LNC-379497",
+		"class": "Slaughter",
+		"country": "Germany",
+		"species": "Cattle",
+		"date": "01 Aug 2021",
+		"issues": 0,
+		"impact": "-"
+	},
+	{
+		"lnc": "LNC-950066",
+		"class": "Breeder",
+		"country": "Japan",
+		"species": "Cattle",
+		"date": "27 Jul 2021",
+		"issues": 1,
+		"impact": 2
+	},
+	{
+		"lnc": "LNC-477574",
+		"class": "Breeder",
+		"country": "China",
+		"species": "Cattle",
+		"date": "20 Jul 2021",
+		"issues": 0,
+		"impact": "-"
+	},
+	{
+		"lnc": "LNC-308458",
+		"class": "Slaughter",
+		"country": "Japan",
+		"species": "Cattle",
+		"date": "16 Jul 2021",
+		"issues": 4,
+		"impact": 3
+	},
+	{
+		"lnc": "LNC-139459",
+		"class": "Slaughter",
+		"country": "Indonesia",
+		"species": "Cattle",
+		"date": "08 Jul 2021",
+		"issues": 3,
+		"impact": 2
+	},
+	{
+		"lnc": "LNC-410543",
+		"class": "Slaughter",
+		"country": "Japan",
+		"species": "Cattle",
+		"date": "29 Jun 2021",
+		"issues": 3,
+		"impact": 1
+	},
+	{
+		"lnc": "LNC-503450",
+		"class": "Breeder",
+		"country": "China",
+		"species": "Cattle",
+		"date": "17 Jun 2021",
+		"issues": 2,
+		"impact": 1
+	},
+	{
+		"lnc": "LNC-994282",
+		"class": "Slaughter",
+		"country": "Germany",
+		"species": "Cattle",
+		"date": "14 Jun 2021",
+		"issues": 0,
+		"impact": "-"
+	},
+	{
+		"lnc": "LNC-898798",
+		"class": "Slaughter",
+		"country": "Indonesia",
+		"species": "Cattle",
+		"date": "07 Jun 2021",
+		"issues": 0,
+		"impact": "-"
+	},
+	{
+		"lnc": "LNC-586300",
+		"class": "Breeder",
+		"country": "Germany",
+		"species": "Cattle",
+		"date": "05 Jun 2021",
+		"issues": 2,
+		"impact": 1
+	},
+	{
+		"lnc": "LNC-810840",
+		"class": "Slaughter",
+		"country": "Thailand",
+		"species": "Cattle",
+		"date": "30 May 2021",
+		"issues": 0,
+		"impact": "-"
+	},
+	{
+		"lnc": "LNC-815716",
+		"class": "Breeder",
+		"country": "UAE",
+		"species": "Cattle",
+		"date": "15 May 2021",
+		"issues": 1,
+		"impact": "-"
+	},
+	{
+		"lnc": "LNC-797104",
+		"class": "Breeder",
+		"country": "China",
+		"species": "Cattle",
+		"date": "07 May 2021",
+		"issues": 3,
+		"impact": 1
+	},
+	{
+		"lnc": "LNC-595267",
+		"class": "Breeder",
+		"country": "Indonesia",
+		"species": "Cattle",
+		"date": "01 May 2021",
+		"issues": 0,
+		"impact": "-"
+	},
+	{
+		"lnc": "LNC-839295",
+		"class": "Breeder",
+		"country": "UAE",
+		"species": "Cattle",
+		"date": "30 Apr 2021",
+		"issues": 0,
+		"impact": "-"
+	},
+	{
+		"lnc": "LNC-718631",
+		"class": "Breeder",
+		"country": "China",
+		"species": "Cattle",
+		"date": "25 Apr 2021",
+		"issues": 2,
+		"impact": 1
+	},
+	{
+		"lnc": "LNC-665281",
+		"class": "Breeder",
+		"country": "Germany",
+		"species": "Cattle",
+		"date": "20 Apr 2021",
+		"issues": 5,
+		"impact": 2
+	},
+	{
+		"lnc": "LNC-604936",
+		"class": "Slaughter",
+		"country": "China",
+		"species": "Cattle",
+		"date": "15 Apr 2021",
+		"issues": 1,
+		"impact": "-"
+	},
+	{
+		"lnc": "LNC-148005",
+		"class": "Slaughter",
+		"country": "Japan",
+		"species": "Cattle",
+		"date": "07 Apr 2021",
+		"issues": 0,
+		"impact": "-"
+	},
+	{
+		"lnc": "LNC-802749",
+		"class": "Breeder",
+		"country": "Thailand",
+		"species": "Cattle",
+		"date": "27 Mar 2021",
+		"issues": 0,
+		"impact": "-"
+	},
+	{
+		"lnc": "LNC-648483",
+		"class": "Breeder",
+		"country": "Indonesia",
+		"species": "Cattle",
+		"date": "21 Mar 2021",
+		"issues": 3,
+		"impact": 2
+	},
+	{
+		"lnc": "LNC-760691",
+		"class": "Breeder",
+		"country": "China",
+		"species": "Cattle",
+		"date": "19 Mar 2021",
+		"issues": 0,
+		"impact": "-"
+	},
+	{
+		"lnc": "LNC-972831",
+		"class": "Breeder",
+		"country": "Germany",
+		"species": "Cattle",
+		"date": "17 Mar 2021",
+		"issues": 1,
+		"impact": 1
+	}
+]
