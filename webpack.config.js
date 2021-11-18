@@ -35,7 +35,6 @@ mode: 'development',
   },
 
  plugins: [
-	 htmlPlugin,
 	 require("tailwindcss"), 
 	 require("autoprefixer")]
 };

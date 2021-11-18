@@ -1,10 +1,13 @@
 {
   "name": "oa-1-2-v1",
+  "homepage": "http://{username}.github.io/oa-1-2-v1",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build:css && webpack serve --config webpack.config.js",
+    "start": "webpack-dev-server  --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
+    "deploy": "oa-1-2-v1 -d build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:css": "postcss src/styles/tailwind.scss -o src/styles/index.scss "
   },
@@ -20,7 +23,9 @@
     "babel-preset-react": "^6.24.1",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.5.1",
+    "dotenv": "^10.0.0",
     "file-loader": "^6.2.0",
+    "html-loader": "^3.0.1",
     "html-webpack-plugin": "^5.5.0",
     "node-sass": "^6.0.1",
     "postcss-cli": "^9.0.2",
@@ -31,6 +36,7 @@
     "tailwindcss": "^2.2.19",
     "webpack": "^5.62.1",
     "webpack-cli": "^4.9.1",
+    "webpack-dev-middleware": "^5.2.2",
     "webpack-dev-server": "^4.4.0",
     "webpack-merge": "^5.8.0"
   },
