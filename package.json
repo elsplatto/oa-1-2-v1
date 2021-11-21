@@ -1,13 +1,14 @@
 {
   "name": "oa-1-2-v1",
-  "homepage": "http://elsplatto.github.io/oa-1-2-v1",
+  "homepage": "https://elsplatto.github.io/oa-1-2-v1",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server  --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "deploy": "oa-1-2-v1 -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:css": "postcss src/styles/tailwind.scss -o src/styles/index.scss "
   },
@@ -25,6 +26,7 @@
     "css-loader": "^6.5.1",
     "dotenv": "^10.0.0",
     "file-loader": "^6.2.0",
+    "gh-pages": "^3.2.3",
     "html-loader": "^3.0.1",
     "html-webpack-plugin": "^5.5.0",
     "node-sass": "^6.0.1",

@@ -33,7 +33,7 @@
 		"lnc": "LNC-447035",
 		"class": "Feeder",
 		"country": "China",
-		"species": "Cattle",
+		"species": "Buffalo",
 		"date": 1632747600000,
 		"issues": 2,
 		"impact": 1,
@@ -53,7 +53,7 @@
 		"lnc": "LNC-876242",
 		"class": "Slaughter",
 		"country": "Japan",
-		"species": "Cattle",
+		"species": "Buffalo",
 		"date": 1629810000000,
 		"issues": 0,
 		"impact": "-",
@@ -78,5 +78,130 @@
 		"issues": 1,
 		"impact": "-",
 		"indicator": null
+	},
+
+
+
+	{
+		"lnc": "LNC-501243",
+		"class": "Slaughter",
+		"country": "Germany",
+		"species": "Buffalo",
+		"date": 1627568889215,
+		"issues": 0,
+		"impact": 0,
+		"indicator": null
+	},
+	{
+		"lnc": "LNC-975189",
+		"class": "Feeder",
+		"country": "UAE",
+		"species": "Cattle",
+		"date": 1611045729157,
+		"issues": 0,
+		"impact": 0,
+		"indicator": null
+	},
+	{
+		"lnc": "LNC-601844",
+		"class": "Slaughter",
+		"country": "Germany",
+		"species": "Cattle",
+		"date": 1608987600000,
+		"issues": 0,
+		"impact": 0,
+		"indicator": null
+	},
+	{
+		"lnc": "LNC-657409",
+		"class": "Slaughter",
+		"country": "Indonesia",
+		"species": "Cattle",
+		"date": 1606741200000,
+		"issues": 0,
+		"impact": 0,
+		"indicator": null
+	},
+	{
+		"lnc": "LNC-813123",
+		"class": "Feeder",
+		"country": "Russia",
+		"species": "Cattle",
+		"date": 1606222800000,
+		"issues": 1,
+		"impact": 1,
+		"indicator": "high"
+	},
+	{
+		"lnc": "LNC-809919",
+		"class": "Slaughter",
+		"country": "Germany",
+		"species": "Cattle",
+		"date": 1605099600000,
+		"issues": 0,
+		"impact": 0,
+		"indicator": null
+	},
+	{
+		"lnc": "LNC-675139",
+		"class": "Feeder",
+		"country": "Thailand",
+		"species": "Cattle",
+		"date": 1604235600000,
+		"issues": 0,
+		"impact": 0,
+		"indicator": null
+	},
+	{
+		"lnc": "LNC-736925",
+		"class": "Slaughter",
+		"country": "Germany",
+		"species": "Cattle",
+		"date": 1603112400000,
+		"issues": 0,
+		"impact": 0,
+		"indicator": null
+	},
+	{
+		"lnc": "LNC-194569",
+		"class": "Feeder",
+		"country": "Indonesia",
+		"species": "Cattle",
+		"date": 1602766800000,
+		"issues": 0,
+		"impact": 0,
+		"indicator": null
+	},
+	{
+		"lnc": "LNC-945395",
+		"class": "Slaughter",
+		"country": "UAE",
+		"species": "Buffalo",
+		"date": 1601816400000,
+		"issues": 0,
+		"impact": 0,
+		"indicator": null
+	},
+	{
+		"lnc": "LNC-636094",
+		"class": "Breeder",
+		"country": "Thailand",
+		"species": "Buffalo",
+		"date": 1601128800000,
+		"issues": 1,
+		"impact": 1,
+		"indicator": null
+	},
+	{
+		"lnc": "LNC-471494",
+		"class": "Slaughter",
+		"country": "China",
+		"species": "Cattle",
+		"date": 1600524000000,
+		"issues": 0,
+		"impact": 0,
+		"indicator": null
 	}
+
+
 ]

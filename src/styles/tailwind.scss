@@ -79,3 +79,19 @@ body {
 	}
 }
 
+.filter-slider {
+  top: 0;
+  right: -20rem;
+  overflow-x: hidden;
+  transition: 0.5s;
+	position: fixed;
+}
+
+.filter-slider.open {
+	right: 0;
+}
+
+.filter-icon-filter-on {
+	filter: invert(69%) sepia(60%) saturate(3856%) hue-rotate(147deg) brightness(95%) contrast(100%);
+}
+

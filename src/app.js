@@ -19,19 +19,20 @@ import Consignments from './views/Consignments';
 
 
 const App = (props) => {  
+	console.log('App props', props)
 	return (
 		<>
 		<Router>
 			<Header {...props} />
 			<TitleArea {...props} />
 				<Switch>
-					<Route path="/dashboard" render={(props) => (
+					<Route path={`${props.basename}/dashboard`} render={(props) => (
 						<Dashboard {...props} />
 					)}/>
-					<Route path="/consignments" render={(props) => (
+					<Route path={`${props.basename}/consignments`} render={(props) => (
 						<Consignments {...props} />
 					)}/>
-					<Route path="/audits" render={(props) => (
+					<Route path={`${props.basename}/audits`} render={(props) => (
 						<Audits {...props} />
 					)}/>
 				</Switch>

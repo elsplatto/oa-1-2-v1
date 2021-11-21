@@ -11,12 +11,10 @@ import './styles/index.scss';
 import {createBrowserHistory} from 'history';
 const history = createBrowserHistory();
 
-// console.log('history:', history)
-
+const baseURL = process.env.NODE_ENV === "production" ? "/oa-1-2-v1" : '';
 
 ReactDOM.render(
 
-	<Router history={history} basename={'/'}>
-		<App />
+	<Router history={history} basename={baseURL}>
+		<App basename={baseURL} />
 	</Router>, document.getElementById('app'));
-	module.hot.accept();
