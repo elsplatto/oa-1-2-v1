@@ -3,6 +3,7 @@ import Button from '../components/Button';
 import ConsignmentTableWidget from '../components/ConsignmentTableWidget';
 import ConsignmentComplianceChart from '../components/ConsignmentComplianceChart';
 import NonComplianceTrendsWidget from '../components/NonComplianceTrendsWidget';
+import {Link} from 'react-router-dom';
 
 import AACurrentCycleTable from '../components/AACurrentCycleTable';
 
@@ -51,7 +52,7 @@ const Dashboard = (props) => {
 						<ConsignmentTableWidget />
 					</div>
 					<div className="col-span-12 mt-8">
-						<Button link="/consignments" type="primary" text="View all consignments" />
+						<Button link="./consignments" type="primary" text="View all consignments" />
 					</div>
 				</div>
 

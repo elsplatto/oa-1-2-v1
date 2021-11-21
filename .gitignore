@@ -73,6 +73,9 @@ node_modules/
 # Dist
 dist/
 
+# Docs
+# docs/
+
 #.env
 *.env
 

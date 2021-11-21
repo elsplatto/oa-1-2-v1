@@ -24,13 +24,13 @@ const TitleArea = (props) => {
 					<div className="col-span-12">
 						<ul className="block relative secondary-nav">
 							<li className="float-left text-base">
-								<NavLink to="./dashboard" activeClassName="border-action text-text" className="no-underline inline-block border-transparent border-b-8 p-4">Dashboard</NavLink>
+								<NavLink to="/dashboard" activeClassName="border-action text-text" className="no-underline inline-block border-transparent border-b-8 p-4">Dashboard</NavLink>
 							</li>
 							<li className="float-left text-base">
-								<NavLink to="./consignments" activeClassName="border-action text-text" className="no-underline inline-block border-transparent border-b-8 p-4">Consignments</NavLink>
+								<NavLink to="/consignments" activeClassName="border-action text-text" className="no-underline inline-block border-transparent border-b-8 p-4">Consignments</NavLink>
 							</li>
 							<li className="float-left text-base">
-								<NavLink to="./audits" activeClassName="border-action text-text" className="no-underline inline-block border-transparent border-b-8 p-4">Audits</NavLink>
+								<NavLink to="/audits" activeClassName="border-action text-text" className="no-underline inline-block border-transparent border-b-8 p-4">Audits</NavLink>
 							</li>
 						</ul>
 					</div>
