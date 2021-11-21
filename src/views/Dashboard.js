@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import Button from '../components/Button';
-import ConsignmentTable from '../components/ConsignmentTable';
+import ConsignmentTableWidget from '../components/ConsignmentTableWidget';
 import ConsignmentComplianceChart from '../components/ConsignmentComplianceChart';
 import NonComplianceTrendsWidget from '../components/NonComplianceTrendsWidget';
 
@@ -48,7 +48,7 @@ const Dashboard = (props) => {
 						<h3 className="text-3xl font-light">Current cycle consignments</h3>
 					</div>
 					<div className="col-span-12">
-						<ConsignmentTable />
+						<ConsignmentTableWidget />
 					</div>
 					<div className="col-span-12 mt-8">
 						<Button link="/consignments" type="primary" text="View all consignments" />
