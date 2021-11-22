@@ -56,6 +56,15 @@ const Dashboard = (props) => {
 					</div>
 				</div>
 
+				<div className="col-span-12 mt-12 border border-background-alt-shade px-7 py-10">
+						<div className="w-full">						
+							<h3 className="text-3xl font-light">Recently approved SEPs and management plans</h3>
+						</div>
+						<div className="w-full h-auto overflow-hidden mt-8">
+							<AACurrentCycleTable />
+						</div>
+					</div>
+
 				<div className="grid grid-cols-12 gap-6 mt-12">
 					<NonComplianceTrendsWidget />
 					<ConsignmentComplianceChart />
@@ -63,15 +72,7 @@ const Dashboard = (props) => {
 
 				<div className="grid grid-cols-12 gap-6 mt-12">
 					<MandMChartWidget />
-					<div className="col-span-6 border border-background-alt-shade px-7 py-10">
-						<div className="w-full">						
-							<h3 className="text-3xl font-light">Recently approved SEPs and management plans</h3>
-						</div>					
-
-						<div className="w-full h-auto overflow-hidden mt-8">
-							<AACurrentCycleTable />
-						</div>
-					</div>
+					
 				</div>
 			</div>
 		</div>

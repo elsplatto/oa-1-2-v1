@@ -4,7 +4,7 @@ import Flag from '../img/icons/flag.svg';
 import LowLevel from '../img/icons/low-level-historic.svg';
 import HighLevel from '../img/icons/high-level-historic.svg';
 
-const ConsignmentTable = ({issuesOnly, filterObj}) => {
+const ConsignmentTable = ({issuesOnly, filterObj, dateRange}) => {
 	const formatNumberToDate = (num) => {
 		const monthArr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 		const convertedDate = new Date(num);
@@ -14,34 +14,47 @@ const ConsignmentTable = ({issuesOnly, filterObj}) => {
 	}	
 
 	const rowHasRecordThatMatchesFilterQuery = (rowObj) => {
-		let metsCountryQuery = !filterObj.country;
-		let metsClassQuery = !filterObj.class;
-		let metsSpeciesQuery = !filterObj.species;
-
+		let meetsCountryQuery = !filterObj.country;
+		let meetsClassQuery = !filterObj.class;
+		let meetsSpeciesQuery = !filterObj.species;
+		let meetsDateQuery = !dateRange[0];
 
 		if (filterObj) {
 			for (const [key, value] of Object.entries(filterObj)) {
-				// console.log(`${key}: ${value}`);
+				// console.log(`Key: ${key} - Value: ${value}`);
 				if (value.length > 0) {
 					value.map((val,i) => {
 						// console.log('Val:', val);
 						if (rowObj[key].includes(val)) {
 							// console.log(`Rowobj has a ${key} called ${val} in it `, rowObj);
 							if (key == "country") {
-								metsCountryQuery = true;
+								meetsCountryQuery = true;
 							}
 							else if (key === "class") {
-								metsClassQuery = true;
+								meetsClassQuery = true;
 							}
 							else if (key === "species") {
-								metsSpeciesQuery = true;
-							}
+								meetsSpeciesQuery = true;
+							}						
 						}
+						
 					})
 				}
+				
 			}		
 		}
-		if (metsCountryQuery && metsClassQuery && metsSpeciesQuery) {
+
+		if (dateRange[0] && dateRange[1]) {
+			if (rowObj.date > (new Date(dateRange[0]).getTime()) && rowObj.date < (new Date(dateRange[1]).getTime())) {
+				meetsDateQuery = true;				
+			}
+		} 
+		
+			// console.log(`%cGetting this far!!!`,'font-size: 20px; color: green')
+			
+
+
+		if (meetsCountryQuery && meetsClassQuery && meetsSpeciesQuery && meetsDateQuery) {
 			return true;
 		} else {
 			return false;
@@ -110,9 +123,6 @@ const ConsignmentTable = ({issuesOnly, filterObj}) => {
 		</table>
 	)
 }
-
-
-
 
 
 

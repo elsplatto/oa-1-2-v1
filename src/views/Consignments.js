@@ -1,18 +1,16 @@
 import React, {useState, useEffect, useRef} from 'react';
-
 import ConsignmentTable from '../components/ConsignmentTable';
 import Filter from '../img/icons/filter.svg';
 import Close from '../img/icons/close.svg';
+import DateRangePicker from '@wojtekmaj/react-daterange-picker';
 
 const Consignments = (props) => {
 
 	const [issuesOnly, setIssuesOnly] = useState(false);
 	const [showFilter, setShowFilter] = useState(false);
-	const [countryFilterArr, setCountryFilterArr] = useState([]);
-	const [classFilterArr, setClassFilterArr] = useState([]);
-	const [speciesFilterArr, setSpeciesFilterArr] = useState([]);
 
-
+	const [dateRange, setDateRange] = useState([null, null]);
+	
 	const [filterChangeCount, setFilterChangeCount] = useState(0);
 
 	const [filterObj, setFilterObj] = useState({});
@@ -29,7 +27,6 @@ const Consignments = (props) => {
 		let changeCount = filterChangeCount;
 
 		const filterCategory = e.target.getAttribute('filtercategory').toLowerCase();
-		// console.log('filterObj', Object.keys(filterObj).includes(filterCategory));
 
 		if (Object.keys(filterObj).includes(filterCategory)) {
 			arr = filterObj[filterCategory];
@@ -68,15 +65,36 @@ const Consignments = (props) => {
 		}		
 	}	
 
+	const handleDateChange = (e) => {
+		if (e) {
+			setDateRange(e);
+		}
+		else {
+			setDateRange([null, null]);
+		}
+	}
+
 	useEffect(() => {
 		prevCountryFilterArrRef.current = filterObj;	
   },[filterChangeCount]);
 
 	return (
 		<>
-		<div className={`filter-slider w-80 ${showFilter ? 'open' : ''} fixed overflow-y-scroll bg-background px-8 py-10 shadow-xl h-full z-10`}>
+		<div className={`filter-slider w-100 ${showFilter ? 'open' : ''} fixed overflow-y-scroll bg-background py-10 shadow-xl h-full z-10`}>
 			<a href="#" onClick={handleToggleFilter} className="absolute top-0 right-0 p-6">Close<img src={Close} className="inline-block ml-2" /></a>
-			<div className="grid mt-8">
+
+			<div className="grid mt-8 border-b border-foreground-border px-8 pb-8">
+				<div className="mt-4 grid">
+				<DateRangePicker
+					onChange={handleDateChange}
+					value={dateRange}
+					dayPlaceholder="dd" monthPlaceholder="mm" yearPlaceholder="yyyy" 
+					format="dd MM yyyy" rangeDivider=" to "
+				/>
+				</div>
+			</div>
+
+			<div className="grid mt-8 border-b border-foreground-border px-8 pb-8">
 				<h5 className="font-semibold">Country</h5>
 				<div className="mt-4 grid">
 					<label className="flex"><input type="checkbox" value="China" filtercategory="country" className="w-6 h-6 mr-3 mb-3" onChange={handleFilterCheckboxChange} />China</label>
@@ -90,7 +108,7 @@ const Consignments = (props) => {
 				</div>
 			</div>
 
-			<div className="grid mt-8">
+			<div className="grid mt-8 border-b border-foreground-border px-8 pb-8">
 				<h5 className="font-semibold">Class</h5>
 				<div className="mt-4 grid">
 					<label className="flex"><input type="checkbox" value="Breeder" filtercategory="class" className="w-6 h-6 mr-3 mb-3" onChange={handleFilterCheckboxChange} />Breeder</label>
@@ -99,7 +117,7 @@ const Consignments = (props) => {
 				</div>
 			</div>
 
-			<div className="grid mt-8">
+			<div className="grid mt-8 border-b border-foreground-border px-8 pb-8">
 				<h5 className="font-semibold">Species</h5>
 				<div className="mt-4 grid">
 					<label className="flex"><input type="checkbox" value="Buffalo" filtercategory="species" className="w-6 h-6 mr-3 mb-3" onChange={handleFilterCheckboxChange} />Buffalo</label>
@@ -126,7 +144,7 @@ const Consignments = (props) => {
 				</div>
 
 				<div className="grid">
-					<ConsignmentTable issuesOnly={issuesOnly} filterObj={filterObj} />					
+					<ConsignmentTable issuesOnly={issuesOnly} filterObj={filterObj} dateRange={dateRange} />					
 				</div>
 			</div>			
 		</div>
