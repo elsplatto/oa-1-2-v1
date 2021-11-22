@@ -16,6 +16,8 @@ import Dashboard from './views/Dashboard';
 
 import Consignments from './views/Consignments';
 
+import ConsignmentOverview from './views/ConsignmentOverview';
+
 const App = (props) => {  
 	
 	return (
@@ -33,6 +35,9 @@ const App = (props) => {
 						)}/>
 						<Route path={`/audits`} render={(props) => (
 							<Audits {...props} />
+						)}/>
+						<Route path={`/consignment-overview/:id`} render={(props) => (
+							<ConsignmentOverview {...props} />
 						)}/>
 					</Switch>
 				<Footer />

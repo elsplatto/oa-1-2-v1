@@ -3,6 +3,21 @@ import {NavLink} from 'react-router-dom';
 import ChevronGraySm from '../img/icons/chevron-right-gray-sm.svg';
 
 const TitleArea = (props) => {
+
+	const childPage = (match, location) => {
+		// console.log('match', match)
+		if (match) {
+			if (match.isExact) {
+				return true
+			}
+		}
+		else if (location.pathname.indexOf('consignment-overview') > -1) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
 	
 	return (
 		<section className="pt-6 bg-background-shade h-auto">
@@ -27,7 +42,7 @@ const TitleArea = (props) => {
 								<NavLink to="/dashboard" activeClassName="border-action text-text" className="no-underline inline-block border-transparent border-b-8 p-4">Dashboard</NavLink>
 							</li>
 							<li className="float-left text-base">
-								<NavLink to="/consignments" activeClassName="border-action text-text" className="no-underline inline-block border-transparent border-b-8 p-4">Consignments</NavLink>
+								<NavLink to="/consignments" isActive={childPage} activeClassName="border-action text-text" className="no-underline inline-block border-transparent border-b-8 p-4">Consignments</NavLink>
 							</li>
 							<li className="float-left text-base">
 								<NavLink to="/audits" activeClassName="border-action text-text" className="no-underline inline-block border-transparent border-b-8 p-4">Audits</NavLink>

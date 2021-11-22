@@ -3,6 +3,7 @@ import consignmentData from '../data/consignment-current-cycle.json';
 import Flag from '../img/icons/flag.svg';
 import LowLevel from '../img/icons/low-level-historic.svg';
 import HighLevel from '../img/icons/high-level-historic.svg';
+import { Link } from 'react-router-dom';
 
 const ConsignmentTable = ({issuesOnly, filterObj, dateRange}) => {
 	const formatNumberToDate = (num) => {
@@ -65,7 +66,7 @@ const ConsignmentTable = ({issuesOnly, filterObj, dateRange}) => {
 	const ConsignmentTableRow = ({consignmentRow}) => {
 		return (
 			<tr>
-				<td><a href="/">{consignmentRow.lnc}</a></td>
+				<td><Link to={`/consignment-overview/${consignmentRow.lnc}`}>{consignmentRow.lnc}</Link></td>
 				<td>{consignmentRow.class}</td>
 				<td>{consignmentRow.species}</td>
 				<td>{consignmentRow.country}</td>
