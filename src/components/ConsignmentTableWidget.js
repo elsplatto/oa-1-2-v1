@@ -1,4 +1,6 @@
 import React, {useEffect, useState} from 'react';
+import {Link} from 'react-router-dom';
+
 import consignmentData from '../data/consignment-current-cycle.json';
 import Flag from '../img/icons/flag.svg';
 import LowLevel from '../img/icons/low-level-historic.svg';
@@ -34,7 +36,7 @@ const ConsignmentTableWidget = (props) => {
 					return (
 						i < 10 ?
 						<tr key={`consightment-`+i}>
-							<td><a href="/">{consignment.lnc}</a></td>
+							<td><Link to={`/consignment-overview/${consignment.lnc}`}>{consignment.lnc}</Link></td>
 							<td>{consignment.class}</td>
 							<td>{consignment.species}</td>
 							<td>{consignment.country}</td>

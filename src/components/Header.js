@@ -1,10 +1,8 @@
 import React, { useState, useContext, useEffect } from 'react';
-import Avatar from '../img/avatar.svg';
 import SiteCOA from '../img/coa.png';
 
 const Header = (props) => {
 	return (
-		<>
 		<header className="bg-header">
 			{/* <div className="absolute z-40 top-1 left-0">
 				<div className="absolute z-40 top-1 left-0 text-green sm:hidden block">
@@ -38,28 +36,8 @@ const Header = (props) => {
 			</div>
 		</header>
 
-		<nav className="bg-background-shade-dark border-b-8 border-item-dark-line-alt">
-			<div className="container mx-auto">
-				<div className="grid grid-cols-12 gap-x-6">
-					<div className="col-span-8 text-base">
-						<ul className="absolute">
-							<li className="float-left">
-								<a href="/" className="p-4 block text-text-dark border-b-8 border-background-shade-dark no-underline">Exporters</a>
-							</li>
-							<li className="float-left">
-								<a href="/" className="p-4 block text-action-dark no-underline">Sign out</a>
-							</li>
-						</ul>
-					</div>
-					<div className="col-span-4">
-						<div className="float-right">
-							<a href="/" className="p-4 block text-action-dark no-underline">Welcome, Morgan <img src={Avatar} alt="Avatar image" className="pl-2 float-right" /></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</nav>
-		</>
+		
+	
   )
 }
 

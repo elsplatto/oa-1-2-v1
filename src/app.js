@@ -1,11 +1,12 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { 
-  BrowserRouter as Router,
+  HashRouter,
   Switch,
   Route,
-HashRouter } from 'react-router-dom';
+	Redirect } from 'react-router-dom';
 
 import Header from './components/Header';
+import TopNav from './components/TopNav';
 import Footer from './components/Footer';
 
 import TitleArea from './components/TitleArea';
@@ -17,16 +18,40 @@ import Dashboard from './views/Dashboard';
 import Consignments from './views/Consignments';
 
 import ConsignmentOverview from './views/ConsignmentOverview';
+import SignIn from './views/SignIn';
+import { LoggedInStatusContext } from './store/Store';
 
 const App = (props) => {  
+
+	const [loginStatus] = useContext(LoggedInStatusContext);
+
+	// console.log('Status:', loginStatus);
+
+	useEffect(() => {
+		console.log('loginStatus', loginStatus)
+	});
 	
 	return (
 		<>
-		<Router>
 			<HashRouter {...props}>
 				<Header {...props} />
-				<TitleArea {...props} />
+					{
+					loginStatus ? 
+						<TopNav {...props} />
+						: null
+					}
+					{
+					loginStatus ? 
+						<TitleArea {...props} />
+						: null
+					}
 					<Switch>
+						<Route exact path="/">
+								<Redirect to="/sign-in" />
+						</Route>
+						<Route path={`/sign-in`} render={(props) => (
+							<SignIn {...props} />
+						)}/>
 						<Route path={`/dashboard`} render={(props) => (
 							<Dashboard {...props} />
 						)}/>
@@ -42,7 +67,6 @@ const App = (props) => {
 					</Switch>
 				<Footer />
 			</HashRouter>
-		</Router>
 		</>
 	)	
 }

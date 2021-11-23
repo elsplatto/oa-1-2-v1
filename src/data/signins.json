@@ -1,0 +1,34 @@
+[
+	{
+		"email": "auditor@agriculture.gov.au",
+		"password": "password",
+		"firstname": "Morgan",
+		"lastname": "Chang",
+		"role": "auditor"
+	},
+	{
+		"email": "rvo@agriculture.gov.au",
+		"password": "password",
+		"firstname": "Morgan",
+		"lastname": "Chang",
+		"role": "rvo"
+	},
+	{
+		"email": "ops@agriculture.gov.au",
+		"password": "password",
+		"firstname": "Morgan",
+		"lastname": "Chang",
+		"role": "ops"
+	},
+	{
+		"email": "exporter@gmail.com",
+		"password": "password",
+		"firstname": "Morgan",
+		"lastname": "Chang",
+		"role": "exporter",
+		"company": "ABC Southern Exports",
+		"exporterID": 1
+	}
+
+
+]
