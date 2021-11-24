@@ -11,6 +11,8 @@ const TopNav = (props) => {
 		setLoginStatus(null);
 	}
 
+	
+
 	return (
 		<nav className="bg-background-shade-dark border-b-8 border-item-dark-line-alt">
 			<div className="container mx-auto">
@@ -27,7 +29,7 @@ const TopNav = (props) => {
 					</div>
 					<div className="col-span-4">
 						<div className="float-right">
-							<a href="#" className="p-4 block text-action-dark no-underline">Welcome, Morgan <img src={Avatar} alt="Avatar image" className="pl-2 float-right" /></a>
+							<a href="#" className="p-4 block text-action-dark no-underline">Welcome, {loginStatus.firstname} <img src={Avatar} alt="Avatar image" className="pl-2 float-right" /></a>
 						</div>
 					</div>
 				</div>

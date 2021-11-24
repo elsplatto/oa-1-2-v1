@@ -23,6 +23,8 @@ const Consignments = (props) => {
 		setIssuesOnly(e.target.checked)
 	}
 
+	localStorage.setItem('lastPage', '/consignments');
+
 	const handleFilterCheckboxChange = (e) => {
 		let arr = null;
 		let obj = filterObj;

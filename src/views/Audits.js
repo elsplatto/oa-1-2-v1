@@ -6,6 +6,8 @@ import { LoggedInStatusContext } from '../store/Store';
 const Audits = (props) => {
 	const [loginStatus] = useContext(LoggedInStatusContext);
 
+	localStorage.setItem('lastPage', '/audits');
+
 	if (loginStatus) {
 		return (
 			<div className="bg-background h-auto overflow-hidden content-area mb-20">

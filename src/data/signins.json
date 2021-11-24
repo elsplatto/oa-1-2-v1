@@ -7,6 +7,13 @@
 		"role": "auditor"
 	},
 	{
+		"email": "terry.oriley@agriculture.gov.au",
+		"password": "password",
+		"firstname": "Terry",
+		"lastname": "O'Riley",
+		"role": "auditor"
+	},
+	{
 		"email": "rvo@agriculture.gov.au",
 		"password": "password",
 		"firstname": "Morgan",

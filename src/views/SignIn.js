@@ -7,8 +7,6 @@ const SignIn = (props) => {
 
 	const [loginStatus, setLoginStatus] = useContext(LoggedInStatusContext);
 
-	// console.log('===Login status', loginStatus)
-
 	const handleSignInClick = (e) => {
 		e.preventDefault();
 		const data = SignInData;
@@ -33,13 +31,13 @@ const SignIn = (props) => {
 	}
 
 	useEffect(()=> {
-		const localSignInData = localStorage.getItem("signInData");
+		const localSignInData = JSON.parse(localStorage.getItem("signInData"));
 		if (!loginStatus && localSignInData) {
 			setLoginStatus(localSignInData);
 		}
-
-		console.log(`Local storage:`, localStorage.getItem("signInData"));
 	},[])
+
+	const lastPage = localStorage.getItem('lastPage');
 
 
 	if (!loginStatus) {
@@ -86,9 +84,16 @@ const SignIn = (props) => {
 		)
 	}
 	else {
-		return (
-			<Redirect to="/dashboard" />
-		)
+		if (lastPage) {
+			return (
+				<Redirect to={lastPage} />
+			)
+		} else {
+			return (
+				<Redirect to="/dashboard" />
+			)
+		}
+		
 	}
 }
 

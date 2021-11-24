@@ -12,6 +12,8 @@ import AACurrentCycleTable from '../components/AACurrentCycleTable';
 
 import MandMChartWidget from '../components/MandMChartWidget';
 
+localStorage.setItem('lastPage', '/dashboard');
+
 const Dashboard = (props) => {
 
 

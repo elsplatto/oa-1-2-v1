@@ -23,16 +23,15 @@ import { LoggedInStatusContext } from './store/Store';
 
 const App = (props) => {  
 
-	const [loginStatus] = useContext(LoggedInStatusContext);
+	const [loginStatus, setLoginStatus] = useContext(LoggedInStatusContext);
+	const localSignInData = JSON.parse(localStorage.getItem("signInData"));
 
-	// console.log('Status:', loginStatus);
-
-	useEffect(() => {
-		console.log('loginStatus', loginStatus)
-	});
+	// if (!loginStatus && localSignInData) {
+	// 	setLoginStatus(localSignInData);
+	// }
+	
 	
 	return (
-		<>
 			<HashRouter {...props}>
 				<Header {...props} />
 					{
@@ -67,7 +66,6 @@ const App = (props) => {
 					</Switch>
 				<Footer />
 			</HashRouter>
-		</>
 	)	
 }
 
