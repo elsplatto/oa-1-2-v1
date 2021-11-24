@@ -25,7 +25,7 @@ const ConsignmentOverview = (props) => {
 							</nav>
 						</div>
 						<div className="col-span-10">
-							<h2 className="mt-12 text-5xl font-light divide-solid">Consignment overview</h2>	
+							<h2 className="mt-12 text-5xl font-light divide-solid leading-normal">Consignment overview</h2>	
 							<h3 className="mt-8 text-3xl font-light divide-solid">{ props.match.params.id }</h3>
 							<span className="mt-2 text-2xl font-light block">Impact level: 2</span>
 							<span className="mt-2 text-lg font-light block">Exporter rep informed: Yes</span>

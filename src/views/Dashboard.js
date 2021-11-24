@@ -25,7 +25,7 @@ const Dashboard = (props) => {
 		return (
 			<div className="bg-background h-auto overflow-hidden content-area mb-20">
 				<div className="container mx-auto">
-					<h2 className="mt-12 text-5xl font-light">Dashboard</h2>
+					<h2 className="mt-12 text-5xl font-light leading-normal">Dashboard</h2>
 					<h3 className="mt-8 text-3xl font-light">Performance level: 1</h3>
 						
 					<div className="grid grid-cols-12 gap-6">

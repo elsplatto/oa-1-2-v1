@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {NavLink} from 'react-router-dom';
 import ChevronGraySm from '../img/icons/chevron-right-gray-sm.svg';
+import ContactIcon from '../img/icons/contact-card.svg';
 
 const TitleArea = (props) => {
 
@@ -11,7 +12,7 @@ const TitleArea = (props) => {
 				return true
 			}
 		}
-		else if (location.pathname.indexOf('consignment-overview') > -1) {
+		else if (location.pathname.indexOf('consignment-overview') > -1 || location.pathname.indexOf('consignment-issues') > -1 || location.pathname.indexOf('consignment-documents') > -1) {
 			return true;
 		}
 		else {
@@ -31,7 +32,8 @@ const TitleArea = (props) => {
 			<div className="container mx-auto overflow-hidden">
 				<div className="grid grid-cols-12">
 					<div className="col-span-12">
-						<h1 className="font-semibold text-5xl pt-8 text-text">ABC Southern Exports</h1>
+						<h1 className="font-semibold text-5xl pt-8 text-text inline-block">ABC Southern Exports</h1>
+						<a href="#" className="pl-4 inline-block"><img src={ContactIcon} /></a>
 					</div>
 				</div>
 

@@ -18,6 +18,9 @@ import Dashboard from './views/Dashboard';
 import Consignments from './views/Consignments';
 
 import ConsignmentOverview from './views/ConsignmentOverview';
+import ConsignmentIssues from './views/ConsignmentIssues';
+import ConsignmentDocuments from './views/ConsignmentDocuments';
+
 import SignIn from './views/SignIn';
 import { LoggedInStatusContext } from './store/Store';
 
@@ -62,6 +65,12 @@ const App = (props) => {
 						)}/>
 						<Route path={`/consignment-overview/:id`} render={(props) => (
 							<ConsignmentOverview {...props} />
+						)}/>
+						<Route path={`/consignment-issues/:id`} render={(props) => (
+							<ConsignmentIssues {...props} />
+						)}/>
+						<Route path={`/consignment-documents/:id`} render={(props) => (
+							<ConsignmentDocuments {...props} />
 						)}/>
 					</Switch>
 				<Footer />

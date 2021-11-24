@@ -16,6 +16,7 @@ const Consignments = (props) => {
 	const [filterChangeCount, setFilterChangeCount] = useState(0);
 
 	const [filterObj, setFilterObj] = useState({});
+	const [filterOn, setFilterOn] = useState(false);
 
 	const prevCountryFilterArrRef = useRef();
 
@@ -70,16 +71,25 @@ const Consignments = (props) => {
 	}	
 
 	const handleDateChange = (e) => {
+		let changeCount = filterChangeCount
 		if (e) {
 			setDateRange(e);
 		}
 		else {
 			setDateRange([null, null]);
 		}
+		changeCount++
+		setFilterChangeCount(changeCount);
+
 	}
 
 	useEffect(() => {
-		prevCountryFilterArrRef.current = filterObj;	
+		prevCountryFilterArrRef.current = filterObj;
+		if (Object.keys(filterObj).length > 0 || dateRange[0]) {
+			setFilterOn(true);
+		} else {
+			setFilterOn(false);
+		}
   },[filterChangeCount]);
 
 	const [loginStatus] = useContext(LoggedInStatusContext);
@@ -88,7 +98,8 @@ const Consignments = (props) => {
 		return (
 			<>
 			<div className={`filter-slider w-100 ${showFilter ? 'open' : ''} fixed overflow-y-scroll bg-background py-10 shadow-xl h-full z-10`}>
-				<a href="#" onClick={handleToggleFilter} className="absolute top-0 right-0 p-6">Close<img src={Close} className="inline-block ml-2" /></a>
+				<a href="#" onClick={handleToggleFilter} className={`absolute top-0 right-0 p-6`}>Close<img src={Close} 
+				className={`inline-block ml-2`} /></a>
 
 				<div className="grid mt-8 border-b border-foreground-border px-8 pb-8">
 					<div className="mt-4 grid">
@@ -136,7 +147,7 @@ const Consignments = (props) => {
 			<div className="bg-background h-auto overflow-hidden content-area mb-20">
 				
 				<div className="container mx-auto">
-					<h2 className="mt-12 text-5xl font-light">Consignments</h2>	
+					<h2 className="mt-12 text-5xl font-light leading-normal">Consignments</h2>	
 
 					<div className="grid grid-cols-12 gap-6 mt-8 items-center">
 						<div className="col-span-10">
@@ -144,7 +155,7 @@ const Consignments = (props) => {
 						</div>
 						<div className="col-span-2">
 							<a href="#" onClick={handleToggleFilter} className="no-underline flex flex-col justify-center items-center float-right">
-								<img src={Filter} className="w-8 h-8" alt="Click for filters" />
+								<img src={Filter} className={`w-8 h-8${filterOn? ' filter-icon-filter-on' : null}`} alt="Click for filters" />
 								<span className="text-sm">Filters</span>
 							</a>
 						</div>
