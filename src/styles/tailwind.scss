@@ -48,8 +48,12 @@
 			}
 		}
 	}
+
+
+
 }
 
+@import 'react-datepicker/dist/react-datepicker';
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700');
 
@@ -99,3 +103,14 @@ body {
 	filter: invert(69%) sepia(60%) saturate(3856%) hue-rotate(147deg) brightness(95%) contrast(100%);
 }
 
+.react-datepicker__input-container {
+	input[type="text"] {
+		border-width: 2px;
+		border-style: solid;
+		border-color: theme('colors.foreground-border.light');
+		border-radius: 5px;
+		width: theme('width.full');
+		height: theme('height.8');
+		padding: 0 theme('padding.2');
+	}
+}

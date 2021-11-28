@@ -33,7 +33,6 @@ const TitleArea = (props) => {
 				<div className="grid grid-cols-12">
 					<div className="col-span-12">
 						<h1 className="font-semibold text-5xl pt-8 text-text inline-block">ABC Southern Exports</h1>
-						<a href="#" className="pl-4 inline-block"><img src={ContactIcon} /></a>
 					</div>
 				</div>
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ComposedChart, BarChart, Bar, Cell, XAxis, YAxis, Scatter, Tooltip, Legend, ResponsiveContainer, LabelList, Rectangle} from 'recharts';
+import { ComposedChart, BarChart, Bar, Cell, XAxis, YAxis, Scatter, Tooltip, Legend, ResponsiveContainer, LabelList, ReferenceLine, Rectangle} from 'recharts';
 
 const data = [
   {
@@ -55,7 +55,7 @@ const NonComplianceTrendsWidget = (props) => {
 										top: 20,
 										right: 20,
 										bottom: 100,
-										left: 20,
+										left: 0,
 									}}
 									padding={{
 										top: 0,
@@ -67,13 +67,14 @@ const NonComplianceTrendsWidget = (props) => {
 									
 									<YAxis />
 									<Tooltip />
-									<Legend  layout="vertical" verticalAlign="top" align="right" margin={{
+									<Legend  layout="vertical" verticalAlign="top" align="center" margin={{
 										top: 0,
 										right: 0,
 										bottom: 0,
 										left: 0}} />
 									<Bar dataKey="total" stackId="a" fill="#808080">
 										<LabelList dataKey="total" position="top" />
+										<Rectangle width="15" hieght="2" x="0" />
 									</Bar>
 									<Scatter dataKey="threshold" fill="#FCB515">
 										<LabelList dataKey="threshold" position="top" fill="#FCB515" />

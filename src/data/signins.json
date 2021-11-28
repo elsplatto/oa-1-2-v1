@@ -7,35 +7,33 @@
 		"role": "auditor"
 	},
 	{
-		"email": "terry.oriley@agriculture.gov.au",
+		"email": "terry.oreilly@agriculture.gov.au",
 		"password": "password",
 		"firstname": "Terry",
-		"lastname": "O'Riley",
+		"lastname": "O'Reilly",
 		"role": "auditor"
 	},
 	{
 		"email": "rvo@agriculture.gov.au",
 		"password": "password",
-		"firstname": "Morgan",
-		"lastname": "Chang",
+		"firstname": "Alice",
+		"lastname": "Ravenstone",
 		"role": "rvo"
 	},
 	{
 		"email": "ops@agriculture.gov.au",
 		"password": "password",
-		"firstname": "Morgan",
-		"lastname": "Chang",
+		"firstname": "Phillip",
+		"lastname": "Tamati",
 		"role": "ops"
 	},
 	{
 		"email": "exporter@gmail.com",
 		"password": "password",
-		"firstname": "Morgan",
-		"lastname": "Chang",
+		"firstname": "Sharon",
+		"lastname": "Watson",
 		"role": "exporter",
 		"company": "ABC Southern Exports",
 		"exporterID": 1
 	}
-
-
 ]

@@ -1,22 +1,21 @@
 import React, {useState, useEffect, useRef, useContext} from 'react';
 import ConsignmentTable from '../components/ConsignmentTable';
-import Filter from '../img/icons/filter.svg';
-import Close from '../img/icons/close.svg';
-import DateRangePicker from '@wojtekmaj/react-daterange-picker';
+import DatePicker from 'react-datepicker';
 import { Redirect } from 'react-router-dom';
 import { LoggedInStatusContext } from '../store/Store';
 
 const Consignments = (props) => {
 
 	const [issuesOnly, setIssuesOnly] = useState(false);
-	const [showFilter, setShowFilter] = useState(false);
+
+	const [startDate, setStartDate] = useState(null);
+	const [endDate, setEndDate] = useState(null)
 
 	const [dateRange, setDateRange] = useState([null, null]);
 	
 	const [filterChangeCount, setFilterChangeCount] = useState(0);
 
 	const [filterObj, setFilterObj] = useState({});
-	const [filterOn, setFilterOn] = useState(false);
 
 	const prevCountryFilterArrRef = useRef();
 
@@ -60,110 +59,123 @@ const Consignments = (props) => {
 		setFilterObj(obj);		
 	}
 
-	const handleToggleFilter = (e) => {
+	const clearDaterange = (e) => {
 		e.preventDefault();
-		if (showFilter) {
-			setShowFilter(false);
-		}
-		else {
-			setShowFilter(true);
-		}		
-	}	
+		setStartDate(null);
+		setEndDate(null);
+		setDateRange([null, null]);
+	}
 
-	const handleDateChange = (e) => {
-		let changeCount = filterChangeCount
-		if (e) {
-			setDateRange(e);
-		}
-		else {
-			setDateRange([null, null]);
-		}
-		changeCount++
+	const handleClearFilters = (e) => {
+		e.preventDefault();
+		let changeCount = filterChangeCount;
+		setStartDate(null);
+		setEndDate(null);
+		setDateRange([null, null]);
+		setFilterObj({});
+		setIssuesOnly(false);
+		changeCount++;
 		setFilterChangeCount(changeCount);
+	}
 
+	const valueInObj = (key, value) => {
+		if (filterObj[key]) {
+			if (filterObj[key].includes(value)) {
+				return true;
+			} else {
+				return false;
+			}
+		} else {
+			return false;
+		}
 	}
 
 	useEffect(() => {
 		prevCountryFilterArrRef.current = filterObj;
-		if (Object.keys(filterObj).length > 0 || dateRange[0]) {
-			setFilterOn(true);
-		} else {
-			setFilterOn(false);
+		if (startDate && endDate && endDate > startDate) {
+			setDateRange([startDate, endDate]);
 		}
-  },[filterChangeCount]);
+  },[filterChangeCount, startDate, endDate]);
 
 	const [loginStatus] = useContext(LoggedInStatusContext);
 
 	if (loginStatus) {
 		return (
 			<>
-			<div className={`filter-slider w-100 ${showFilter ? 'open' : ''} fixed overflow-y-scroll bg-background py-10 shadow-xl h-full z-10`}>
-				<a href="#" onClick={handleToggleFilter} className={`absolute top-0 right-0 p-6`}>Close<img src={Close} 
-				className={`inline-block ml-2`} /></a>
-
-				<div className="grid mt-8 border-b border-foreground-border px-8 pb-8">
-					<div className="mt-4 grid">
-					<DateRangePicker
-						onChange={handleDateChange}
-						value={dateRange}
-						dayPlaceholder="dd" monthPlaceholder="mm" yearPlaceholder="yyyy" 
-						format="dd MM yyyy" rangeDivider=" to "
-					/>
-					</div>
-				</div>
-
-				<div className="grid mt-8 border-b border-foreground-border px-8 pb-8">
-					<h5 className="font-semibold">Country</h5>
-					<div className="mt-4 grid">
-						<label className="flex"><input type="checkbox" value="China" filtercategory="country" className="w-6 h-6 mr-3 mb-3" onChange={handleFilterCheckboxChange} />China</label>
-						<label className="flex"><input type="checkbox" value="Germany" filtercategory="country" className="w-6 h-6 mr-3 mb-3" onChange={handleFilterCheckboxChange} />Germany</label>
-						<label className="flex"><input type="checkbox" value="Indonesia" filtercategory="country" className="w-6 h-6 mr-3 mb-3" onChange={handleFilterCheckboxChange} />Indonesia</label>
-						<label className="flex"><input type="checkbox" value="Japan" filtercategory="country" className="w-6 h-6 mr-3 mb-3" onChange={handleFilterCheckboxChange} />Japan</label>
-						<label className="flex"><input type="checkbox" value="Russia" filtercategory="country" className="w-6 h-6 mr-3 mb-3" onChange={handleFilterCheckboxChange} />Russia</label>
-						<label className="flex"><input type="checkbox" value="Thailand" filtercategory="country" className="w-6 h-6 mr-3 mb-3" onChange={handleFilterCheckboxChange} />Thailand</label>
-						<label className="flex"><input type="checkbox" value="UAE" filtercategory="country" className="w-6 h-6 mr-3 mb-3" onChange={handleFilterCheckboxChange} />UAE</label>
-						<label className="flex"><input type="checkbox" value="Vietnam" filtercategory="country" className="w-6 h-6 mr-3 mb-3" onChange={handleFilterCheckboxChange} />Vietnam</label>
-					</div>
-				</div>
-
-				<div className="grid mt-8 border-b border-foreground-border px-8 pb-8">
-					<h5 className="font-semibold">Class</h5>
-					<div className="mt-4 grid">
-						<label className="flex"><input type="checkbox" value="Breeder" filtercategory="class" className="w-6 h-6 mr-3 mb-3" onChange={handleFilterCheckboxChange} />Breeder</label>
-						<label className="flex"><input type="checkbox" value="Feeder" filtercategory="class" className="w-6 h-6 mr-3 mb-3" onChange={handleFilterCheckboxChange} />Feeder</label>
-						<label className="flex"><input type="checkbox" value="Slaughter" filtercategory="class" className="w-6 h-6 mr-3 mb-3" onChange={handleFilterCheckboxChange} />Slaughter</label>
-					</div>
-				</div>
-
-				<div className="grid mt-8 border-b border-foreground-border px-8 pb-8">
-					<h5 className="font-semibold">Species</h5>
-					<div className="mt-4 grid">
-						<label className="flex"><input type="checkbox" value="Buffalo" filtercategory="species" className="w-6 h-6 mr-3 mb-3" onChange={handleFilterCheckboxChange} />Buffalo</label>
-						<label className="flex"><input type="checkbox" value="Cattle" filtercategory="species" className="w-6 h-6 mr-3 mb-3" onChange={handleFilterCheckboxChange} />Cattle</label>
-					</div>
-				</div>
-
-			</div>
+			
 			<div className="bg-background h-auto overflow-hidden content-area mb-20">
 				
 				<div className="container mx-auto">
-					<h2 className="mt-12 text-5xl font-light leading-normal">Consignments</h2>	
-
-					<div className="grid grid-cols-12 gap-6 mt-8 items-center">
-						<div className="col-span-10">
-							<label className="flex"><input type="checkbox" value="true" onChange={handleIssuesCheckboxChange} className="w-6 h-6 mr-3" />Show only consignments with issues</label>
-						</div>
+					<div className="grid grid-cols-12 mt-12 gap-x-10">
 						<div className="col-span-2">
-							<a href="#" onClick={handleToggleFilter} className="no-underline flex flex-col justify-center items-center float-right">
-								<img src={Filter} className={`w-8 h-8${filterOn? ' filter-icon-filter-on' : null}`} alt="Click for filters" />
-								<span className="text-sm">Filters</span>
-							</a>
+							<div className="grid mt-4 border-b border-foreground-border pb-8">
+								<a href="#" onClick={handleClearFilters} className="inline-block bg-background py-2 px-7 text-action no-underline rounded-md border-2 border-background">Clear all filters</a>
+							</div>
+							<div className="grid mt-4 border-b border-foreground-border pb-8">
+								<h5 className="font-semibold">Show issues only?</h5>
+								<div className="mt-4 grid relative">
+									<label className="flex"><input type="checkbox" value="true" checked={issuesOnly} onChange={handleIssuesCheckboxChange} className="w-6 h-6 mr-3" />Yes</label>
+								</div>
+							</div>
+
+							<div className="grid mt-8 border-b border-foreground-border pb-8">
+								<h5 className="font-semibold">Filter by date range</h5>
+								<div className="mt-4 grid relative">
+									<span className="block text-sm">From:</span>
+									<div className="relative">
+										<DatePicker selected={startDate} onChange={(date) => setStartDate(date)} dateFormat="dd/MM/yyyy" />
+									</div>
+									<span className="block text-sm">to:</span>
+									<div className="relative">
+										<DatePicker selected={endDate} onChange={(date) => setEndDate(date)} dateFormat="dd/MM/yyyy" />
+									</div>
+									<div className="mt-2">
+										<a href="#" className="text-sm" onClick={clearDaterange}>Clear date range</a>
+									</div>
+								</div>
+							</div>
+
+							<div className="grid mt-8 border-b border-foreground-border pb-8">
+								<h5 className="font-semibold">Filter by country</h5>
+								<div className="mt-4 grid">
+									<label className="flex"><input type="checkbox" checked={valueInObj('country','China')} value="China" filtercategory="country" className="w-6 h-6 mr-3 mb-3" onChange={handleFilterCheckboxChange} />China</label>
+									<label className="flex"><input type="checkbox" checked={valueInObj('country','Germany')} value="Germany" filtercategory="country" className="w-6 h-6 mr-3 mb-3" onChange={handleFilterCheckboxChange} />Germany</label>
+									<label className="flex"><input type="checkbox" checked={valueInObj('country','Indonesia')} value="Indonesia" filtercategory="country" className="w-6 h-6 mr-3 mb-3" onChange={handleFilterCheckboxChange} />Indonesia</label>
+									<label className="flex"><input type="checkbox" checked={valueInObj('country','Japan')} value="Japan" filtercategory="country" className="w-6 h-6 mr-3 mb-3" onChange={handleFilterCheckboxChange} />Japan</label>
+									<label className="flex"><input type="checkbox" checked={valueInObj('country','Russia')} value="Russia" filtercategory="country" className="w-6 h-6 mr-3 mb-3" onChange={handleFilterCheckboxChange} />Russia</label>
+									<label className="flex"><input type="checkbox" checked={valueInObj('country','Thailand')} value="Thailand" filtercategory="country" className="w-6 h-6 mr-3 mb-3" onChange={handleFilterCheckboxChange} />Thailand</label>
+									<label className="flex"><input type="checkbox" checked={valueInObj('country','UAE')} value="UAE" filtercategory="country" className="w-6 h-6 mr-3 mb-3" onChange={handleFilterCheckboxChange} />UAE</label>
+									<label className="flex"><input type="checkbox" checked={valueInObj('country','Vietnam')} value="Vietnam" filtercategory="country" className="w-6 h-6 mr-3 mb-3" onChange={handleFilterCheckboxChange} />Vietnam</label>
+								</div>
+							</div>
+
+							<div className="grid mt-8 border-b border-foreground-border pb-8">
+								<h5 className="font-semibold">Filter by class</h5>
+								<div className="mt-4 grid">
+									<label className="flex"><input type="checkbox" checked={valueInObj('class','Breeder')} value="Breeder" filtercategory="class" className="w-6 h-6 mr-3 mb-3" onChange={handleFilterCheckboxChange} />Breeder</label>
+									<label className="flex"><input type="checkbox" checked={valueInObj('class','Feeder')} value="Feeder" filtercategory="class" className="w-6 h-6 mr-3 mb-3" onChange={handleFilterCheckboxChange} />Feeder</label>
+									<label className="flex"><input type="checkbox" checked={valueInObj('class','Slaughter')} value="Slaughter" filtercategory="class" className="w-6 h-6 mr-3 mb-3" onChange={handleFilterCheckboxChange} />Slaughter</label>
+								</div>
+							</div>
+
+							<div className="grid mt-8 border-b border-foreground-border pb-8">
+								<h5 className="font-semibold">Filter by species</h5>
+								<div className="mt-4 grid">
+									<label className="flex"><input type="checkbox" checked={valueInObj('species','Buffalo')} value="Buffalo" filtercategory="species" className="w-6 h-6 mr-3 mb-3" onChange={handleFilterCheckboxChange} />Buffalo</label>
+									<label className="flex"><input type="checkbox" checked={valueInObj('species','Cattle')} value="Cattle" filtercategory="species" className="w-6 h-6 mr-3 mb-3" onChange={handleFilterCheckboxChange} />Cattle</label>
+								</div>
+							</div>
+						</div>
+
+						<div className="col-span-10">
+						<h2 className="text-5xl font-light leading-normal">Consignments</h2>	
+
+						<div className="grid">
+							<ConsignmentTable issuesOnly={issuesOnly} filterObj={filterObj} dateRange={dateRange} />					
 						</div>
 					</div>
-
-					<div className="grid">
-						<ConsignmentTable issuesOnly={issuesOnly} filterObj={filterObj} dateRange={dateRange} />					
 					</div>
+					
 				</div>			
 			</div>
 			</>
@@ -174,6 +186,7 @@ const Consignments = (props) => {
 			)
 		}
 }
+
 
 
 export default Consignments; 
