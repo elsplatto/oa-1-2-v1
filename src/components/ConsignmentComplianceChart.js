@@ -496,7 +496,7 @@ const ConsignmentComplianceChart = (props) => {
 							top: 20,
 							right: 0,
 							left: 0,
-							bottom: 5,
+							bottom: 20,
 						}}>				
 						<XAxis dataKey="year" />
 						<YAxis />
