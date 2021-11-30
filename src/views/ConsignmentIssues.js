@@ -87,7 +87,7 @@ const ConsignmentIssues = (props) => {
 							<div className="w-full">
 
 								<h5 className="mt-10 text-xl">
-									Issue: ASEL Lamess
+									Issue: ASEL Lamess (Issue attributed to RE)
 								</h5>
 
 								<p className="mt-4 text-base">
@@ -112,8 +112,7 @@ const ConsignmentIssues = (props) => {
 											</AccordionItemHeading>
 											<AccordionItemPanel>
 													<p>
-															Exercitation in fugiat est ut ad ea cupidatat ut in
-															cupidatat occaecat ut occaecat consequat est minim minim
+															Exercitation in fugiat est ut ad ea cupidatat ut in cupidatat occaecat ut occaecat consequat est minim minim 
 															esse tempor laborum consequat esse adipisicing eu
 															reprehenderit enim.
 													</p>

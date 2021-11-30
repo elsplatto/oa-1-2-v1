@@ -5,7 +5,7 @@ import LowLevel from '../img/icons/low-level-historic.svg';
 import HighLevel from '../img/icons/high-level-historic.svg';
 import { Link } from 'react-router-dom';
 
-const ConsignmentTable = ({issuesOnly, filterObj, dateRange}) => {
+const ConsignmentTable = ({issuesOnly, filterObj, dateRange, lncSearch}) => {
 	const formatNumberToDate = (num) => {
 		const monthArr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 		const convertedDate = new Date(num);
@@ -19,6 +19,7 @@ const ConsignmentTable = ({issuesOnly, filterObj, dateRange}) => {
 		let meetsClassQuery = !filterObj.class;
 		let meetsSpeciesQuery = !filterObj.species;
 		let meetsDateQuery = !dateRange[0];
+		let meetsLNCSearchQuery = !lncSearch;
 
 		if (filterObj) {
 			for (const [key, value] of Object.entries(filterObj)) {
@@ -40,8 +41,7 @@ const ConsignmentTable = ({issuesOnly, filterObj, dateRange}) => {
 						}
 						
 					})
-				}
-				
+				}				
 			}		
 		}
 
@@ -50,12 +50,22 @@ const ConsignmentTable = ({issuesOnly, filterObj, dateRange}) => {
 				meetsDateQuery = true;				
 			}
 		} 
-		
-			// console.log(`%cGetting this far!!!`,'font-size: 20px; color: green')
+
+		if (lncSearch) {
 			
+			// if  (rowObj.lnc.indexOf(lncSearch) > -1 || rowObj.lnc == lncSearch) {
+			// 	console.log(`%cLNC meets query ${rowObj.lnc}`,'color: green; font-size: 20px;');
+			// 	console.log(`%cLowercase rowObj LNC ${rowObj.lnc.toString().toLowerCase()}`,'color: blue;');
+			// 	console.log(`%cLowercase search string ${lncSearch.toString().toLowerCase()}`,'color: blue;');
+			// 	console.log(`%cIn ${lncSearch.toString().toLowerCase()}`,'color: blue;');
+			// 	meetsLNCSearchQuery = true;
+			// }
+			if (rowObj.lnc.toString().toLowerCase().indexOf(lncSearch.toString().toLowerCase()) > -1 || (rowObj.lnc.toString().toLowerCase() == lncSearch.toString().toLowerCase())) {
+				meetsLNCSearchQuery = true;
+			}
+		}
 
-
-		if (meetsCountryQuery && meetsClassQuery && meetsSpeciesQuery && meetsDateQuery) {
+		if (meetsCountryQuery && meetsClassQuery && meetsSpeciesQuery && meetsDateQuery && meetsLNCSearchQuery) {
 			return true;
 		} else {
 			return false;
