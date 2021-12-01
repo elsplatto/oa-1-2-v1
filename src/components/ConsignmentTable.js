@@ -81,8 +81,9 @@ const ConsignmentTable = ({issuesOnly, filterObj, dateRange, lncSearch}) => {
 				<td>{consignmentRow.species}</td>
 				<td>{consignmentRow.country}</td>
 				<td>{formatNumberToDate(consignmentRow.date)}</td>
-				<td className="px-4 py-2 text-sm text-left">{consignmentRow.issues}</td>
-				<td className="px-4 py-2 text-sm text-left">{consignmentRow.impact}
+				<td className="px-4 py-2 text-sm text-center">{consignmentRow.issues}</td>
+				<td className="px-4 py-2 text-sm text-center">{consignmentRow.impact}</td>
+				<td className="px-4 py-2 text-sm text-left">
 				{
 					(()=> {
 						switch (consignmentRow.indicator) {
@@ -93,7 +94,7 @@ const ConsignmentTable = ({issuesOnly, filterObj, dateRange, lncSearch}) => {
 						}
 					})()
 				}
-				</td>									
+				</td>
 			</tr>
 		)
 	}	
@@ -109,6 +110,7 @@ const ConsignmentTable = ({issuesOnly, filterObj, dateRange, lncSearch}) => {
 					<th className="w-auto py-2">Date</th>
 					<th className="w-auto py-2">Issues</th>
 					<th className="w-auto py-2">Impact level</th>
+					<th className="w-auto py-2"></th>
 				</tr>
 			</thead>
 			<tbody>

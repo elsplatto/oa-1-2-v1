@@ -79,6 +79,8 @@ const Consignments = (props) => {
 		setIssuesOnly(false);
 		changeCount++;
 		setFilterChangeCount(changeCount);
+		setLncSearch(null);
+		clearSearch();
 	}
 
 	const handleLNCSearch = (e) => {
@@ -93,6 +95,10 @@ const Consignments = (props) => {
 
 	const handleSearchClear = (e) => {
 		e.preventDefault();
+		clearSearch();		
+	}
+
+	const clearSearch = () => {
 		const searchEl = document.getElementById('LNCSearch');
 		// console.log('LNCSearch', searchEl)
 		if (searchEl) {
@@ -126,7 +132,7 @@ const Consignments = (props) => {
 		return (			
 			<div className="bg-background h-auto overflow-hidden content-area mb-20">				
 				<div className="container mx-auto">
-					<div className="grid grid-cols-12 mt-12 gap-x-10">
+					<div className="grid grid-cols-12 mt-12 gap-x-14">
 						<div className="col-span-2">
 							<div className="grid mt-4 border-b border-foreground-border">
 								<a href="#" onClick={handleClearFilters} className="inline-block bg-background py-2 px-7 text-action no-underline rounded-md border-2 border-background">Reset filters</a>
