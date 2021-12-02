@@ -1,0 +1,80 @@
+[
+	{
+		"category": "Physical condition",
+		"diagnosis": "Uncoordinated, collapsed, weak",
+		"number_affected": 2,
+		"RFID": ["ROPR30495853930","ROPR9484984444"],
+		"related_consignments": "1 consignment",
+		"observations": "Animal weak and struggling to rise.",
+		"notes": "AAV alerted me to an animal that had been exhibiting weakness. After observing it over the course of the inspection .",
+		"evidence": [
+			{
+				"link": "#",
+				"text": "Image 1 - suspected weak animal"
+			},
+			{
+				"link": "#",
+				"text": "Image 2 - suspected weak animal"
+			},
+			{
+				"link": "#",
+				"text": "Video 1 - animal struggling to rise"
+			},
+			{
+				"link": "#",
+				"text": "Video 2 - animal showing signs of weakness while walking"
+			}
+		]
+	},
+
+	{
+		"category": "Physical injuries",
+		"diagnosis": "Lameness (attributed to RE)",
+		"number_affected": 1,
+		"RFID": ["ABCD1234LEQ00001"],
+		"related_consignments": "3 consignments",
+		"observations": "Injury to LF pastern - issue assigned to Booyong Pastoral Facility.",
+		"notes": "During drafting at the registered premises several of the lower railings became loose. This resulted in extensive injuries to the cattles’ LF pastern from the metal posts.",
+		"evidence": [
+			{
+				"link": "#",
+				"text": "Image 1 - injured LF pastern"
+			},
+			{
+				"link": "#",
+				"text": "Image 2 - loose railing"
+			},
+			{
+				"link": "#",
+				"text": "Video - injured LF pastern"
+			}
+		]
+	},
+	{
+		"category": "Physical injuries",
+		"diagnosis": "Swelling/sign of fracture",
+		"number_affected": 4,
+		"RFID": ["WDFR34033G8766","WDFR33233G87222", "WDFR375233G29054", "WDFR88233G09983"],
+		"related_consignments": "1 consignment",
+		"observations": "Injury to RB pastern.",
+		"notes": "During unloading a number of heifers stumbled and fell from the loading ramp. The RB pasterns of 4 heifers have since become swollen and the animals are keeping weight off it. Suspected fractures.",
+		"evidence": [
+			{
+				"link": "#",
+				"text": "Image 1 - suspected fracture to RB pastern"
+			},
+			{
+				"link": "#",
+				"text": "Image 2 - suspected fracture to RB pastern"
+			},
+			{
+				"link": "#",
+				"text": "Image 3 - suspected fracture to RB pastern"
+			},
+			{
+				"link": "#",
+				"text": "Image 4 - suspected fracture to RB pastern"
+			}
+		]
+	}
+]

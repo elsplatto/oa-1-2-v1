@@ -1,16 +1,7 @@
 import React, {useContext } from 'react';
 import { NavLink, Redirect } from 'react-router-dom';
 import { LoggedInStatusContext } from '../store/Store';
-import Chevron from '../img/icons/chevron-action.svg';
-
-import {
-	Accordion,
-	AccordionItem,
-	AccordionItemHeading,
-	AccordionItemButton,
-	AccordionItemPanel,
-	AccordionItemState
-} from 'react-accessible-accordion';
+import IssuesDetails from '../data/issues-details.json';
 
 
 const ConsignmentIssues = (props) => {
@@ -35,7 +26,7 @@ const ConsignmentIssues = (props) => {
 							</nav>
 						</div>
 						<div className="col-span-10">
-							<div calssName="w-full">
+							<div className="w-full">
 								<h2 className="mt-12 text-5xl font-light divide-solid leading-normal">Consignment issues</h2>	
 								<h3 className="mt-8 text-3xl font-light divide-solid">{ props.match.params.id }</h3>
 								<span className="mt-2 text-2xl font-light block">Impact level: 2</span>
@@ -44,82 +35,64 @@ const ConsignmentIssues = (props) => {
 								<h4 className="mt-4 text-3xl">
 									Issues
 								</h4>
+								{
+									IssuesDetails.map((issue,i) => {
+										return (
+											<div key={`issue-${i}`}>
+												<h5 className="mt-4 text-2xl">
+													{issue.category}: {issue.diagnosis}
+												</h5>
+												<p className="mt-4">
+													<strong>Animals effected:</strong> {issue.number_affected}
+												</p>
+												<p className="mt-2">
+													<strong>RFID: </strong> 
+													{
+														issue.RFID.map((id,k) => {
+															return (
+																<span key={`rfid-${i}-${k}`}>{id}{(k+1) < issue.RFID.length ? ', ' : null}</span>
+															)
+														})
+													}
+												</p>
+												<p className="mt-2">
+													Other consignments with this issue.
+												</p>
+												<p className="mt-2">
+													<a href="#">{issue.related_consignments}</a>
+												</p>
 
-								<h5 className="mt-4 text-xl">
-									Issue: ASEL Lamess
-								</h5>
+												<h6 className="mt-4 text-lg underline">
+													Observation
+												</h6>
+												<p>
+													{issue.observations}
+												</p>
 
-								<p className="mt-4 text-base">
-									Observation: Injury to LF pastern.
-								</p>
+												<h6 className="mt-4 text-lg underline">
+													Notes
+												</h6>
+												<p>
+													{issue.notes}
+												</p>
 
-								<p className="mt-4 text-base">
-									Notes: During drafting at the registered premises several of the lower railings became loose. This resulted in extensive injuries to the 
-									cattles’ LF pastern from the metal posts.
-								</p>
-
-								<Accordion allowZeroExpanded className="mt-4 w-full">
-									<AccordionItem id="evidence-item-raa-0">
-											<AccordionItemHeading className="bg-background-shade">
-													<AccordionItemButton className="flex flex-row p-4">
-														<span className="font-semibold flex-grow text-action underline">Evidence</span>
-														<AccordionItemState>														
-															{({ expanded }) => (expanded ? <img src={Chevron} id="chevron-raa-0" /> : <img src={Chevron} className={`transform rotate-180`} id="chevron-raa-0" />)}
-														</AccordionItemState>
-
-													</AccordionItemButton>
-											</AccordionItemHeading>
-											<AccordionItemPanel>
-													<p>
-															Exercitation in fugiat est ut ad ea cupidatat ut in
-															cupidatat occaecat ut occaecat consequat est minim minim
-															esse tempor laborum consequat esse adipisicing eu
-															reprehenderit enim.
-													</p>
-											</AccordionItemPanel>
-									</AccordionItem>
-								</Accordion>
-
-								<hr className="mt-10" />
-							</div>
-
-
-							<div className="w-full">
-
-								<h5 className="mt-10 text-xl">
-									Issue: ASEL Lamess (Issue attributed to RE)
-								</h5>
-
-								<p className="mt-4 text-base">
-									Observation: Injury to LF pastern.
-								</p>
-
-								<p className="mt-4 text-base">
-									Notes: During drafting at the registered premises several of the lower railings became loose. This resulted in extensive injuries to the 
-									cattles’ LF pastern from the metal posts.
-								</p>
-
-								<Accordion allowZeroExpanded className="mt-4 w-full">
-									<AccordionItem id="evidence-item-raa-1">
-											<AccordionItemHeading className="bg-background-shade">
-													<AccordionItemButton className="flex flex-row p-4">
-														<span className="font-semibold flex-grow text-action underline">Evidence</span>
-														<AccordionItemState>														
-															{({ expanded }) => (expanded ? <img src={Chevron} id="chevron-raa-1" /> : <img src={Chevron} className={`transform rotate-180`} id="chevron-raa-1" />)}
-														</AccordionItemState>
-
-													</AccordionItemButton>
-											</AccordionItemHeading>
-											<AccordionItemPanel>
-													<p>
-															Exercitation in fugiat est ut ad ea cupidatat ut in cupidatat occaecat ut occaecat consequat est minim minim 
-															esse tempor laborum consequat esse adipisicing eu
-															reprehenderit enim.
-													</p>
-											</AccordionItemPanel>
-									</AccordionItem>
-								</Accordion>
-
+												<h6 className="mt-4 text-lg underline">
+													Evidence
+												</h6>
+												<ul>
+													{
+														issue.evidence.map((media, j) => {
+															return (
+																<li key={`media-${i}-${j}`}><a href={media.link}>{media.text}</a></li>
+															)
+														})
+													}
+												</ul>
+												<hr className="mt-10" />
+											</div>
+										)
+									})
+								}
 							</div>
 						</div>
 
