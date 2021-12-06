@@ -6,10 +6,10 @@ const AACurrentCycleTable = (props) => {
 		<table className="w-full mt-6 striped">
 			<thead>
 				<tr>
-					<th className="w-2/12">Country</th>
-					<th className="w-2/12">Species</th>
-					<th className="w-2/12">Class</th>
-					<th className="w-2/12">Date</th>
+					<th className="w-auto py-2">Country</th>
+					<th className="w-auto py-2">Species</th>
+					<th className="w-auto py-2">Class</th>
+					<th className="w-auto py-2">Date</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -31,4 +31,4 @@ const AACurrentCycleTable = (props) => {
 }
 
 
-export default AACurrentCycleTable; 
+export default AACurrentCycleTable;

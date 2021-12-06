@@ -9,6 +9,7 @@ import {Link} from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
 
 import AACurrentCycleTable from '../components/AACurrentCycleTable';
+import AuditTable from '../components/AuditTable';
 
 import MandMChartWidget from '../components/MandMChartWidget';
 
@@ -68,7 +69,7 @@ const Dashboard = (props) => {
 						<div className="w-full">						
 							<h3 className="text-3xl font-light">Recently approved SEPs and management plans</h3>
 						</div>
-						<div className="w-full h-auto overflow-hidden mt-8">
+						<div className="w-full h-auto overflow-hidden">
 							<AACurrentCycleTable />
 						</div>
 					</div>
@@ -76,6 +77,22 @@ const Dashboard = (props) => {
 					<div className="grid grid-cols-12 gap-6 mt-12">
 						<NonComplianceTrendsWidget />
 						<ConsignmentComplianceChart />
+					</div>
+
+					<div className="grid grid-cols-12 gap-6 mt-12 px-7 py-10 border border-background-alt-shade">
+						<div className="col-span-12">
+							<h3 className="text-3xl font-light">Audits</h3>
+						</div>
+						<div className="col-span-12">
+							<AuditTable />
+						</div>
+						<div className="col-span-6 mt-8">
+							<Button link="./audits" type="primary" text="View audit history" />
+						</div>
+						<div className="col-span-6 mt-8 flex items-center">
+							<span className="mr-6 flex-grow">Next audit: 23 Dec 2022</span>
+							<span>Previous audit: <a href="#">23 Dec 2021</a></span>
+						</div>
 					</div>
 
 					<div className="grid grid-cols-12 gap-6 mt-12">

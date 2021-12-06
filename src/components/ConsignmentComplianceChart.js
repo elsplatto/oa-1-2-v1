@@ -439,6 +439,12 @@ const ConsignmentComplianceChart = (props) => {
 		setConsignmentNonComplianceDataKey(str + 'non-compliant');
 	}
 
+	const LegendTextManager = (value, entry) => {
+		const { color } = entry;
+	
+		return <span style={{'color': '#333', 'textTransform': 'capitalize'}}>{value}</span>;
+	};
+
 
 	const [consignmentComplianceDataKey, setConsignmentComplianceDataKey] = useState('compliant');
 	const [consignmentNonComplianceDataKey, setConsignmentNonComplianceDataKey] = useState('non-compliant');
@@ -486,22 +492,38 @@ const ConsignmentComplianceChart = (props) => {
 				</div>
 			</div>
 
-			<div className="w-full h-96 overflow-hidden mt-8">
+			<div className="w-full h-96 mt-8">
 				<ResponsiveContainer className="w-full h-full">
 					<BarChart
 						width={'100%'}
-						height={300}
+						height={'100%'}
 						data={data}
 						margin={{
-							top: 20,
+							top: 0,
 							right: 0,
 							left: 0,
-							bottom: 20,
+							bottom: 0
+						}} padding={{
+							top: 0,
+							right: 0,
+							left: 0,
+							bottom: 20
 						}}>				
 						<XAxis dataKey="year" />
 						<YAxis />
 						<Tooltip />
-						<Legend />
+						<Legend formatter={LegendTextManager} payload={
+								[
+									{ id: consignmentComplianceDataKey, value: 'Compliant', type: 'square', color: '#E0E0E0'},
+									{ id: consignmentNonComplianceDataKey, value: 'Non-compliant', type: 'square', color: '#808080'},
+								]
+							 } 
+							wrapperStyle={{
+								paddingBottom: "10px",
+								position: "absolute",
+								bottom: "-30px",
+								overflow: "visible"
+							}} />
 						<Bar dataKey={consignmentComplianceDataKey} stackId="a" fill="#E0E0E0" />
 						<Bar dataKey={consignmentNonComplianceDataKey} stackId="a" fill="#808080" />
 					</BarChart>

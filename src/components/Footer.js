@@ -1,8 +1,7 @@
-import React, { useState, useContext, useEffect } from 'react';
-import Avatar from '../img/avatar.svg';
-import SiteCOA from '../img/coa.png';
+import React from 'react';
 
-const Header = (props) => {
+
+const Footer = (props) => {
 	return (
 		<footer className="bg-background-dark relative w-full border-t-4 border-item-dark-line-alt">
 			<div className="container mx-auto pt-12 pb-6 border-b border-item-dark-line-alt">
@@ -30,4 +29,4 @@ const Header = (props) => {
   )
 }
 
-export default Header;
+export default Footer;
