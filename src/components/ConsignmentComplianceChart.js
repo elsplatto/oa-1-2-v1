@@ -1,397 +1,398 @@
 import React, {useState} from 'react';
+import consignmentComplianceData from '../data/consignment-compliance.json';
 
 import { BarChart, Bar, Cell, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
-const data = [
-  {
-    year: '2016',
-    compliant: 85,
-    "non-compliant": 8,
-		feeder: {
-			compliant: 23,
-			"non-compliant": 2,
-			japan: {
-				compliant: 11,
-				'non-compliant': 1
-			},
-			china: {
-				compliant: 9,
-				"non-compliant": 0
-			},
-			indonesia: {
-				compliant: 3,
-				"non-compliant": 1
-			}
-		},
-		slaughter: {
-			compliant: 12,
-			"non-compliant": 4,
-			japan: {
-				compliant: 2,
-				'non-compliant': 1
-			},
-			china: {
-				compliant: 2,
-				"non-compliant": 0
-			},
-			indonesia: {
-				compliant: 8,
-				"non-compliant": 3
-			}
-		},
-		breeder: {
-			compliant: 50,
-			"non-compliant": 2,
-			japan: {
-				compliant: 10,
-				'non-compliant': 1
-			},
-			china: {
-				compliant: 30,
-				"non-compliant": 0
-			},
-			indonesia: {
-				compliant: 10,
-				"non-compliant": 1
-			}
-		},		
-		japan: {
-			compliant: 11,
-			'non-compliant': 1
-		},
-		china: {
-			compliant: 9,
-			"non-compliant": 0
-		},
-		indonesia: {
-			compliant: 3,
-			"non-compliant": 1
-		},
-    year: '2017',
-    compliant: 92,
-    "non-compliant": 8,
-		feeder: {
-			compliant: 43,
-			"non-compliant": 4,
-			japan: {
-				compliant: 11,
-				'non-compliant': 1
-			},
-			china: {
-				compliant: 25,
-				"non-compliant": 2
-			},
-			indonesia: {
-				compliant: 6,
-				"non-compliant": 1
-			}
-		},
-		slaughter: {
-			compliant: 19,
-			"non-compliant": 4,
-			japan: {
-				compliant: 3,
-				'non-compliant': 1
-			},
-			china: {
-				compliant: 8,
-				"non-compliant": 1
-			},
-			indonesia: {
-				compliant: 8,
-				"non-compliant": 2
-			}
-		},
-		breeder: {
-			compliant: 68,
-			"non-compliant": 5,
-			japan: {
-				compliant: 10,
-				'non-compliant': 1
-			},
-			china: {
-				compliant: 38,
-				"non-compliant": 1
-			},
-			indonesia: {
-				compliant: 20,
-				"non-compliant": 3
-			}
-		},
-		japan: {
-			compliant: 33,
-			"non-compliant": 2
-		},
-		china: {
-			compliant: 42,
-			"non-compliant": 0
-		},
-		indonesia: {
-			compliant: 34,
-			"non-compliant": 1
-		}
-  },
-  {
-    year: '2018',
-    compliant: 130,
-    "non-compliant": 5,
-		feeder: {
-			compliant: 23,
-			"non-compliant": 2,
-			japan: {
-				compliant: 11,
-				'non-compliant': 1
-			},
-			china: {
-				compliant: 9,
-				"non-compliant": 0
-			},
-			indonesia: {
-				compliant: 3,
-				"non-compliant": 1
-			}
-		},
-		slaughter: {
-			compliant: 65,
-			"non-compliant": 6,
-			japan: {
-				compliant: 25,
-				'non-compliant': 1
-			},
-			china: {
-				compliant: 22,
-				"non-compliant": 2
-			},
-			indonesia: {
-				compliant: 18,
-				"non-compliant": 3
-			}
-		},
-		breeder: {
-			compliant: 50,
-			"non-compliant": 2,
-			japan: {
-				compliant: 10,
-				'non-compliant': 1
-			},
-			china: {
-				compliant: 30,
-				"non-compliant": 0
-			},
-			indonesia: {
-				compliant: 10,
-				"non-compliant": 1
-			}
-		},
-		japan: {
-			compliant: 40,
-			"non-compliant": 3
-		},
-		china: {
-			compliant: 58,
-			"non-compliant": 1
-		},
-		indonesia: {
-			compliant: 32,
-			"non-compliant": 1
-		}
-  },
-  {
-    year: '2019',
-    compliant: 145,
-    "non-compliant": 8,
-		feeder: {
-			compliant: 23,
-			"non-compliant": 2,			
-			japan: {
-				compliant: 11,
-				'non-compliant': 1
-			},
-			china: {
-				compliant: 9,
-				"non-compliant": 0
-			},
-			indonesia: {
-				compliant: 3,
-				"non-compliant": 1
-			}
-		},
-		slaughter: {
-			compliant: 12,
-			"non-compliant": 4,
-			japan: {
-				compliant: 2,
-				'non-compliant': 1
-			},
-			china: {
-				compliant: 2,
-				"non-compliant": 0
-			},
-			indonesia: {
-				compliant: 8,
-				"non-compliant": 3
-			}
-		},
-		breeder: {
-			compliant: 50,
-			"non-compliant": 2,
-			japan: {
-				compliant: 10,
-				'non-compliant': 1
-			},
-			china: {
-				compliant: 30,
-				"non-compliant": 0
-			},
-			indonesia: {
-				compliant: 10,
-				"non-compliant": 1
-			}
-		},
-		japan: {
-			compliant: 40,
-			"non-compliant": 3
-		},
-		china: {
-			compliant: 68,
-			"non-compliant": 2
-		},
-		indonesia: {
-			compliant: 37,
-			"non-compliant": 3
-		}
-  },
-  {
-    year: '2020',
-    compliant: 85,
-    "non-compliant": 2,
-		feeder: {
-			compliant: 23,
-			"non-compliant": 2,
-			japan: {
-				compliant: 11,
-				'non-compliant': 1
-			},
-			china: {
-				compliant: 9,
-				"non-compliant": 0
-			},
-			indonesia: {
-				compliant: 3,
-				"non-compliant": 1
-			}
-		},
-		slaughter: {
-			compliant: 12,
-			"non-compliant": 4,
-			japan: {
-				compliant: 2,
-				'non-compliant': 1
-			},
-			china: {
-				compliant: 2,
-				"non-compliant": 0
-			},
-			indonesia: {
-				compliant: 8,
-				"non-compliant": 3
-			}
-		},
-		breeder: {
-			compliant: 50,
-			"non-compliant": 2,
-			japan: {
-				compliant: 10,
-				'non-compliant': 1
-			},
-			china: {
-				compliant: 30,
-				"non-compliant": 0
-			},
-			indonesia: {
-				compliant: 10,
-				"non-compliant": 1
-			}
-		},
-		japan: {
-			compliant: 20,
-			"non-compliant": 1
-		},
-		china: {
-			compliant: 50,
-			"non-compliant": 0
-		},
-		indonesia: {
-			compliant: 15,
-			"non-compliant": 1
-		}
-  },
-  {
-    year: '2021',
-    compliant: 66,
-    "non-compliant": 2,
-		feeder: {
-			compliant: 12,
-			"non-compliant": 2,
-			japan: {
-				compliant: 8,
-				'non-compliant': 2
-			},
-			china: {
-				compliant: 2,
-				"non-compliant": 0
-			},
-			indonesia: {
-				compliant: 2,
-				"non-compliant": 0
-			}
-		},
-		slaughter: {
-			compliant: 23,
-			"non-compliant": 4,
-			japan: {
-				compliant: 7,
-				'non-compliant': 1
-			},
-			china: {
-				compliant: 12,
-				"non-compliant": 2
-			},
-			indonesia: {
-				compliant: 5,
-				"non-compliant": 1
-			}
-		},
-		breeder: {
-			compliant: 31,
-			"non-compliant": 2,
-			japan: {
-				compliant: 4,
-				'non-compliant': 0
-			},
-			china: {
-				compliant: 22,
-				"non-compliant": 1
-			},
-			indonesia: {
-				compliant: 5,
-				"non-compliant": 1
-			}
-		},
-		japan: {
-			compliant: 16,
-			"non-compliant": 1
-		},
-		china: {
-			compliant: 40,
-			"non-compliant": 0
-		},
-		indonesia: {
-			compliant: 10,
-			"non-compliant": 1
-		}
-  }
-];
+// const data = [
+//   {
+//     year: '2016',
+//     compliant: 85,
+//     "non-compliant": 8,
+// 		feeder: {
+// 			compliant: 23,
+// 			"non-compliant": 2,
+// 			japan: {
+// 				compliant: 11,
+// 				'non-compliant': 1
+// 			},
+// 			china: {
+// 				compliant: 9,
+// 				"non-compliant": 0
+// 			},
+// 			indonesia: {
+// 				compliant: 3,
+// 				"non-compliant": 1
+// 			}
+// 		},
+// 		slaughter: {
+// 			compliant: 12,
+// 			"non-compliant": 4,
+// 			japan: {
+// 				compliant: 2,
+// 				'non-compliant': 1
+// 			},
+// 			china: {
+// 				compliant: 2,
+// 				"non-compliant": 0
+// 			},
+// 			indonesia: {
+// 				compliant: 8,
+// 				"non-compliant": 3
+// 			}
+// 		},
+// 		breeder: {
+// 			compliant: 50,
+// 			"non-compliant": 2,
+// 			japan: {
+// 				compliant: 10,
+// 				'non-compliant': 1
+// 			},
+// 			china: {
+// 				compliant: 30,
+// 				"non-compliant": 0
+// 			},
+// 			indonesia: {
+// 				compliant: 10,
+// 				"non-compliant": 1
+// 			}
+// 		},		
+// 		japan: {
+// 			compliant: 11,
+// 			'non-compliant': 1
+// 		},
+// 		china: {
+// 			compliant: 9,
+// 			"non-compliant": 0
+// 		},
+// 		indonesia: {
+// 			compliant: 3,
+// 			"non-compliant": 1
+// 		},
+//     year: '2017',
+//     compliant: 92,
+//     "non-compliant": 8,
+// 		feeder: {
+// 			compliant: 43,
+// 			"non-compliant": 4,
+// 			japan: {
+// 				compliant: 11,
+// 				'non-compliant': 1
+// 			},
+// 			china: {
+// 				compliant: 25,
+// 				"non-compliant": 2
+// 			},
+// 			indonesia: {
+// 				compliant: 6,
+// 				"non-compliant": 1
+// 			}
+// 		},
+// 		slaughter: {
+// 			compliant: 19,
+// 			"non-compliant": 4,
+// 			japan: {
+// 				compliant: 3,
+// 				'non-compliant': 1
+// 			},
+// 			china: {
+// 				compliant: 8,
+// 				"non-compliant": 1
+// 			},
+// 			indonesia: {
+// 				compliant: 8,
+// 				"non-compliant": 2
+// 			}
+// 		},
+// 		breeder: {
+// 			compliant: 68,
+// 			"non-compliant": 5,
+// 			japan: {
+// 				compliant: 10,
+// 				'non-compliant': 1
+// 			},
+// 			china: {
+// 				compliant: 38,
+// 				"non-compliant": 1
+// 			},
+// 			indonesia: {
+// 				compliant: 20,
+// 				"non-compliant": 3
+// 			}
+// 		},
+// 		japan: {
+// 			compliant: 33,
+// 			"non-compliant": 2
+// 		},
+// 		china: {
+// 			compliant: 42,
+// 			"non-compliant": 0
+// 		},
+// 		indonesia: {
+// 			compliant: 34,
+// 			"non-compliant": 1
+// 		}
+//   },
+//   {
+//     year: '2018',
+//     compliant: 130,
+//     "non-compliant": 5,
+// 		feeder: {
+// 			compliant: 23,
+// 			"non-compliant": 2,
+// 			japan: {
+// 				compliant: 11,
+// 				'non-compliant': 1
+// 			},
+// 			china: {
+// 				compliant: 9,
+// 				"non-compliant": 0
+// 			},
+// 			indonesia: {
+// 				compliant: 3,
+// 				"non-compliant": 1
+// 			}
+// 		},
+// 		slaughter: {
+// 			compliant: 65,
+// 			"non-compliant": 6,
+// 			japan: {
+// 				compliant: 25,
+// 				'non-compliant': 1
+// 			},
+// 			china: {
+// 				compliant: 22,
+// 				"non-compliant": 2
+// 			},
+// 			indonesia: {
+// 				compliant: 18,
+// 				"non-compliant": 3
+// 			}
+// 		},
+// 		breeder: {
+// 			compliant: 50,
+// 			"non-compliant": 2,
+// 			japan: {
+// 				compliant: 10,
+// 				'non-compliant': 1
+// 			},
+// 			china: {
+// 				compliant: 30,
+// 				"non-compliant": 0
+// 			},
+// 			indonesia: {
+// 				compliant: 10,
+// 				"non-compliant": 1
+// 			}
+// 		},
+// 		japan: {
+// 			compliant: 40,
+// 			"non-compliant": 3
+// 		},
+// 		china: {
+// 			compliant: 58,
+// 			"non-compliant": 1
+// 		},
+// 		indonesia: {
+// 			compliant: 32,
+// 			"non-compliant": 1
+// 		}
+//   },
+//   {
+//     year: '2019',
+//     compliant: 145,
+//     "non-compliant": 8,
+// 		feeder: {
+// 			compliant: 23,
+// 			"non-compliant": 2,			
+// 			japan: {
+// 				compliant: 11,
+// 				'non-compliant': 1
+// 			},
+// 			china: {
+// 				compliant: 9,
+// 				"non-compliant": 0
+// 			},
+// 			indonesia: {
+// 				compliant: 3,
+// 				"non-compliant": 1
+// 			}
+// 		},
+// 		slaughter: {
+// 			compliant: 12,
+// 			"non-compliant": 4,
+// 			japan: {
+// 				compliant: 2,
+// 				'non-compliant': 1
+// 			},
+// 			china: {
+// 				compliant: 2,
+// 				"non-compliant": 0
+// 			},
+// 			indonesia: {
+// 				compliant: 8,
+// 				"non-compliant": 3
+// 			}
+// 		},
+// 		breeder: {
+// 			compliant: 50,
+// 			"non-compliant": 2,
+// 			japan: {
+// 				compliant: 10,
+// 				'non-compliant': 1
+// 			},
+// 			china: {
+// 				compliant: 30,
+// 				"non-compliant": 0
+// 			},
+// 			indonesia: {
+// 				compliant: 10,
+// 				"non-compliant": 1
+// 			}
+// 		},
+// 		japan: {
+// 			compliant: 40,
+// 			"non-compliant": 3
+// 		},
+// 		china: {
+// 			compliant: 68,
+// 			"non-compliant": 2
+// 		},
+// 		indonesia: {
+// 			compliant: 37,
+// 			"non-compliant": 3
+// 		}
+//   },
+//   {
+//     year: '2020',
+//     compliant: 85,
+//     "non-compliant": 2,
+// 		feeder: {
+// 			compliant: 23,
+// 			"non-compliant": 2,
+// 			japan: {
+// 				compliant: 11,
+// 				'non-compliant': 1
+// 			},
+// 			china: {
+// 				compliant: 9,
+// 				"non-compliant": 0
+// 			},
+// 			indonesia: {
+// 				compliant: 3,
+// 				"non-compliant": 1
+// 			}
+// 		},
+// 		slaughter: {
+// 			compliant: 12,
+// 			"non-compliant": 4,
+// 			japan: {
+// 				compliant: 2,
+// 				'non-compliant': 1
+// 			},
+// 			china: {
+// 				compliant: 2,
+// 				"non-compliant": 0
+// 			},
+// 			indonesia: {
+// 				compliant: 8,
+// 				"non-compliant": 3
+// 			}
+// 		},
+// 		breeder: {
+// 			compliant: 50,
+// 			"non-compliant": 2,
+// 			japan: {
+// 				compliant: 10,
+// 				'non-compliant': 1
+// 			},
+// 			china: {
+// 				compliant: 30,
+// 				"non-compliant": 0
+// 			},
+// 			indonesia: {
+// 				compliant: 10,
+// 				"non-compliant": 1
+// 			}
+// 		},
+// 		japan: {
+// 			compliant: 20,
+// 			"non-compliant": 1
+// 		},
+// 		china: {
+// 			compliant: 50,
+// 			"non-compliant": 0
+// 		},
+// 		indonesia: {
+// 			compliant: 15,
+// 			"non-compliant": 1
+// 		}
+//   },
+//   {
+//     year: '2021',
+//     compliant: 66,
+//     "non-compliant": 2,
+// 		feeder: {
+// 			compliant: 12,
+// 			"non-compliant": 2,
+// 			japan: {
+// 				compliant: 8,
+// 				'non-compliant': 2
+// 			},
+// 			china: {
+// 				compliant: 2,
+// 				"non-compliant": 0
+// 			},
+// 			indonesia: {
+// 				compliant: 2,
+// 				"non-compliant": 0
+// 			}
+// 		},
+// 		slaughter: {
+// 			compliant: 23,
+// 			"non-compliant": 4,
+// 			japan: {
+// 				compliant: 7,
+// 				'non-compliant': 1
+// 			},
+// 			china: {
+// 				compliant: 12,
+// 				"non-compliant": 2
+// 			},
+// 			indonesia: {
+// 				compliant: 5,
+// 				"non-compliant": 1
+// 			}
+// 		},
+// 		breeder: {
+// 			compliant: 31,
+// 			"non-compliant": 2,
+// 			japan: {
+// 				compliant: 4,
+// 				'non-compliant': 0
+// 			},
+// 			china: {
+// 				compliant: 22,
+// 				"non-compliant": 1
+// 			},
+// 			indonesia: {
+// 				compliant: 5,
+// 				"non-compliant": 1
+// 			}
+// 		},
+// 		japan: {
+// 			compliant: 16,
+// 			"non-compliant": 1
+// 		},
+// 		china: {
+// 			compliant: 40,
+// 			"non-compliant": 0
+// 		},
+// 		indonesia: {
+// 			compliant: 10,
+// 			"non-compliant": 1
+// 		}
+//   }
+// ];
 
 const ConsignmentComplianceChart = (props) => {
 
@@ -437,6 +438,8 @@ const ConsignmentComplianceChart = (props) => {
 
 		setConsignmentComplianceDataKey(str + 'compliant');
 		setConsignmentNonComplianceDataKey(str + 'non-compliant');
+
+		// console.log('consignmentComplianceKeyObj', consignmentComplianceKeyObj)
 	}
 
 	const LegendTextManager = (value, entry) => {
@@ -497,7 +500,7 @@ const ConsignmentComplianceChart = (props) => {
 					<BarChart
 						width={'100%'}
 						height={'100%'}
-						data={data}
+						data={consignmentComplianceData}
 						margin={{
 							top: 0,
 							right: 0,
@@ -517,7 +520,7 @@ const ConsignmentComplianceChart = (props) => {
 									{ id: consignmentComplianceDataKey, value: 'Compliant', type: 'square', color: '#E0E0E0'},
 									{ id: consignmentNonComplianceDataKey, value: 'Non-compliant', type: 'square', color: '#808080'},
 								]
-							 } 
+							} 
 							wrapperStyle={{
 								paddingBottom: "10px",
 								position: "absolute",

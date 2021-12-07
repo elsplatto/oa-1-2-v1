@@ -11,6 +11,8 @@ import { Redirect } from 'react-router-dom';
 import AACurrentCycleTable from '../components/AACurrentCycleTable';
 import AuditTable from '../components/AuditTable';
 
+import AltSpaceChart from '../components/AltSpaceChart';
+
 import MandMChartWidget from '../components/MandMChartWidget';
 
 localStorage.setItem('lastPage', '/dashboard');
@@ -96,7 +98,8 @@ const Dashboard = (props) => {
 					</div>
 
 					<div className="grid grid-cols-12 gap-6 mt-12">
-						<MandMChartWidget />					
+						<MandMChartWidget />			
+						<AltSpaceChart />		
 					</div>
 				</div>
 			</div>

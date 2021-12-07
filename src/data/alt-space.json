@@ -1,0 +1,176 @@
+[
+	{
+	"breeder": 
+		{
+			"air": [
+				{
+					"country": "Japan",
+					"score": 1
+				},
+				{
+					"country": "Thailand",
+					"score": 2
+				},
+				{
+					"country": "China",
+					"score": 0
+				},
+				{
+					"country": "Germany",
+					"score": 1
+				},
+				{
+					"country": "Indonesia",
+					"score": 2
+				},
+				{
+					"country": "Vietnam",
+					"score": 2
+				}
+			],
+			"airThreshold": 6,
+			"sea": [
+				{
+					"country": "Japan",
+					"score": 4
+				},
+				{
+					"country": "Thailand",
+					"score": 2
+				},
+				{
+					"country": "China",
+					"score": 3
+				},
+				{
+					"country": "Germany",
+					"score": 5
+				},
+				{
+					"country": "Indonesia",
+					"score": 3
+				},
+				{
+					"country": "Vietnam",
+					"score": 6
+				}
+			],
+			"seaThreshold": 6
+		}			
+	,
+	"feeder": 
+		{
+			"air": [
+				{
+					"country": "Japan",
+					"score": 0
+				},
+				{
+					"country": "Thailand",
+					"score": 3
+				},
+				{
+					"country": "China",
+					"score": 0
+				},
+				{
+					"country": "Germany",
+					"score": 1
+				},
+				{
+					"country": "Indonesia",
+					"score": 2
+				},
+				{
+					"country": "Vietnam",
+					"score": 2
+				}
+			],
+			"airThreshold": 8,
+			"sea": [
+				{
+					"country": "Japan",
+					"score": 0
+				},
+				{
+					"country": "Thailand",
+					"score": 2
+				},
+				{
+					"country": "China",
+					"score": 3
+				},
+				{
+					"country": "Germany",
+					"score": 5
+				},
+				{
+					"country": "Indonesia",
+					"score": 4
+				},
+				{
+					"country": "Vietnam",
+					"score": 2
+				}
+			],
+			"seaThreshold": 12
+		},
+	"slaughter":
+		{
+			"air": [
+				{
+					"country": "Japan",
+					"score": 2
+				},
+				{
+					"country": "Thailand",
+					"score": 0
+				},
+				{
+					"country": "China",
+					"score": 1
+				},
+				{
+					"country": "Germany",
+					"score": 2
+				},
+				{
+					"country": "Indonesia",
+					"score": 1
+				},
+				{
+					"country": "Vietnam",
+					"score": 0
+				}
+			],
+			"airThreshold": 8,
+			"sea": [
+				{
+					"country": "Japan",
+					"score": 1
+				},
+				{
+					"country": "Thailand",
+					"score": 5
+				},
+				{
+					"country": "China",
+					"score": 5
+				},
+				{
+					"country": "Germany",
+					"score": 7
+				},
+				{
+					"country": "Indonesia",
+					"score": 4
+				},
+				{
+					"country": "Vietnam",
+					"score": 8
+				}
+			],
+			"seaThreshold": 12
+		}
+	}
+]
